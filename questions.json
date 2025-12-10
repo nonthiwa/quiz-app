@@ -1067,7 +1067,7 @@
     "reference" : ""
   },
   {
-    "question": "What remote authentication servers can you configure to validate your FortiAnalyzer administrator logons? (Choose three)",
+    "question": "What remote authentication servers can you configure to validate your FortiAnalyzer administrator logons? (Choose three.)",
     "question_image": "",
     "options": {
       "A": "RADIUS",
@@ -1081,7 +1081,7 @@
     "reference" : ""
   },
   {
-    "question": "What statements are true regarding disk log quota? (Choose two)",
+    "question": "What statements are true regarding disk log quota? (Choose two.)",
     "question_image": "",
     "options": {
       "A": "The FortiAnalyzer stops logging once the disk log quota is met.",
@@ -1094,7 +1094,7 @@
     "reference" : ""
   },
   {
-    "question": "What statements are true regarding FortiAnalyzer 's treatment of high availability (HA) dusters? (Choose two)",
+    "question": "What statements are true regarding FortiAnalyzer 's treatment of high availability (HA) dusters? (Choose two.)",
     "question_image": "",
     "options": {
       "A": "FortiAnalyzer distinguishes different devices by their serial number.",
@@ -1107,7 +1107,7 @@
     "reference" : ""
   },
   {
-    "question": "What are the operating modes of FortiAnalyzer? (Choose two)",
+    "question": "What are the operating modes of FortiAnalyzer? (Choose two.)",
     "question_image": "",
     "options": {
       "A": "Standalone",
@@ -1120,7 +1120,7 @@
     "reference" : ""
   },
   {
-    "question": "Which statements are correct regarding FortiAnalyzer reports? (Choose two)",
+    "question": "Which statements are correct regarding FortiAnalyzer reports? (Choose two.)",
     "question_image": "",
     "options": {
       "A": "FortiAnalyzer provides the ability to create custom reports.",
@@ -1146,7 +1146,7 @@
     "reference" : ""
   },
   {
-    "question": "FortiAnalyzer centralizes which functions? (Choose three)",
+    "question": "FortiAnalyzer centralizes which functions? (Choose three.)",
     "question_image": "",
     "options": {
       "A": "Network analysis",
