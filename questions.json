@@ -1,0 +1,2217 @@
+[
+  {
+    "question": "Which two statements regarding ADOM modes are true? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "In normal mode, the disk quota of the ADOM is fixed and cannot be modified, but in advanced mode, the disk quota of the ADOM is flexible.",
+      "B": "You can change ADOM modes only through the CLI.",
+      "C": "In an advanced mode ADOM, you can assign FortiGate VDOMs from a single FortiGate device to multiple FortiAnalyzer ADOMs.",
+      "D": "Normal mode is the default ADOM mode."
+    },
+    "answers": ["C", "D"],
+    "explanation": ""
+    ,"reference" : ""
+  },
+  {
+    "question": "What is the purpose of the FortiAnalyzer command diagnose system print netstat?",
+    "question_image": "",
+    "options": {
+      "A": "It provides network statistics for active connections, including the protocols, IP addresses, and connection states.",
+      "B": "It provides the complete routing table, including directly connected routes.",
+      "C": "It provides the static DNS table, including the host names and their expiration timers.",
+      "D": "It provides NTP server information, including server IPs. stratum, poll time, and latency."
+    },
+    "answers": ["A"],
+    "explanation": "The diagnose system print netstat command in FortiAnalyzer provides detailed information on active network connections, similar to the netstat command found in many operating systems."
+    ,"reference" : ""
+  },
+    {
+    "question": "The exhibit shows the creation of a new administrator on FortiAnalyzer.\n What are two effects of enabling the choice Match all users on remote server when configuring a new administrator? (Choose two.)",
+    "question_image": "images/quiz3.png",
+    "options": {
+      "A": "It allows user accounts in the LDAP server to use two-factor authentication.",
+      "B": "It creates a wildcard administrator using an LDAP server.",
+      "C": "User Remote-Admin from the LDAP server will be able to log in to FortiAnalyzer at any time.",
+      "D": "Administrators can log in to FortiAnalyzer using their credentials on the remote LDAP server."
+    },
+    "answers": ["B","D"],
+    "explanation": "Enabling this option allows any user authenticated by the LDAP server to log in to FortiAnalyzer,effectively creating a wildcard administrator."
+    ,"reference" : ""
+  },
+    {
+    "question": "The connection status of a new device on FortiAnalyzer is listed as Unauthorized. \nWhat does that status mean?",
+    "question_image": "",
+    "options": {
+      "A": "It is a device whose registration has not yet been accepted in FortiAnalvzer.",
+      "B": "It is a device that has not yet been assigned an ADOM.",
+      "C": "It is a device that is waiting for you to configure a pre-shared key.",
+      "D": "It is a device that FortiAnalvzer does not support."
+    },
+    "answers": ["A"],
+    "explanation": "The \"Unauthorized\" status indicates that the device has been discovered or attempted to connect but has not yet been authorized for management by FortiAnalyzer. It requires an administrator to approve or authorize the device before it can be fully managed."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which image corresponds to the packet capture shown in the exhibit?",
+    "question_image": "images/quiz5.png",
+    "options": {
+      "A": "images/quiz5_answer1.png",
+      "B": "images/quiz5_answer2.png",
+      "C": "images/quiz5_answer3.png",
+      "D": "images/quiz5_answer4.png"
+    },
+    "answers": ["A"],
+    "explanation": "Chosen image shows the device Remote-FortiGate with the IP 10.200.3.1 and a connection status of \"Connection Up,\" which is consistent with the packet capture details showing active communication between the client and server."
+    ,"reference" : ""
+  },
+    {
+    "question": "What is the purpose of configuring FortiAnalyzer with the settings displayed in the image?",
+    "question_image": "images/quiz6.png",
+    "options": {
+      "A": "To increase reliability",
+      "B": "To expand bandwidth",
+      "C": "To maximize resiliency",
+      "D": "To improve security"
+    },
+    "answers": ["D"],
+    "explanation": "The settings displayed in the image show the creation of a VLAN interface on FortiAnalyzer. The VLAN ID is set to 100, and it is associated with port 5. The purpose of configuring a VLAN interface like this is generally: To improve security. By creating a VLAN, traffic can be segmented into isolated networks, which helps limit access and enhances security by reducing the broadcast domain and keeping different types of traffic(e.g., management, user, and data traffic) separate."
+    ,"reference" : ""
+  },
+    {
+    "question": "What are offline logs on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "Compressed logs, also known as archive logs",
+      "B": "Logs that are indexed and stored in the SQL database",
+      "C": "Any logs collected from offline devices after they boot up",
+      "D": "Real-time logs that are not yet indexed"
+    },
+    "answers": ["C"],
+    "explanation": "These logs are generated when devices that were previously offline come back online and send their log data to the FortiAnalyzer."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two elements are contained in a system backup created on FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Logs from registered devices",
+      "B": "Database snapshot",
+      "C": "Report information",
+      "D": "System information"
+    },
+    "answers": ["C","D"],
+    "explanation": "A FortiAnalyzer system backup includes configurations, report settings, and system information, but it does not include logs from registered devices or database snapshots. Logs are stored separately and are not part of the system configuration backup."
+    ,"reference" : ""
+  },
+    {
+    "question": "Based on the partial outputs displayed, which devices can be members of a FortiAnalyzer Fabric?",
+    "question_image": "images/quiz9.png",
+    "options": {
+      "A": "FortiAnalyzer1 and FortiAnalyzer3",
+      "B": "All devices listed can be members.",
+      "C": "FortiAnalyzer1 and FortiAnalyzer2",
+      "D": "FortiAnalyzer2 and FortiAnalyzer3"
+    },
+    "answers": ["C"],
+    "explanation": "Based on the partial configuration output, the primary factor for determining which devices can be members of a FortiAnalyzer Fabric is the log-mode setting. Devices with the same log mode can be part of the same FortiAnalyzer Fabric.\nFortiAnalyzer1: Log mode is set to collector.\nFortiAnalyzer2: Log mode is set to collector.\nFortiAnalyzer3: Log mode is set to analyzer.\nDevices with the same log mode can be part of the same fabric. Since FortiAnalyzer1 and FortiAnalyzer2 both have their log modes set to collector, they can be members of a FortiAnalyzer Fabric.\nTherefore, the correct answer is FortiAnalyzer1 and FortiAnalyzer2."
+    ,"reference" : ""
+  },
+    {
+    "question": "You finished registering a FortiGate device. After traffic starts to flow through FortiGate, you notice that only some of the logs expected are being received on FortiAnalyzer.\nWhat could be the reason for the logs not arriving on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "FortiGate was added to the wrong ADOM type.",
+      "B": "This FortiGate model is not fully supported.",
+      "C": "FortiGate does not have logging configured correctly.",
+      "D": "This FortiGate is part of an HA cluster but it is the secondary device."
+    },
+    "answers": ["C"],
+    "explanation": "This issue can occur if FortiGate is not properly configured to send logs to FortiAnalyzer, such as incorrect logging settings or filters being applied that prevent certain logs from being sent. It's important to verify that logging is enabled on FortiGate and that the correct log settings (such as log severity or log type) are configured for transmission to FortiAnalyzer."
+    ,"reference" : ""
+  },
+    {
+    "question": "An administrator, fortinet, can view logs and perform device management tasks, such as adding and removing registered devices. However, administrator fortinet is not able to create a mail server that can be used to send alert emails.\nWhat can be the problem?",
+    "question_image": "",
+    "options": {
+      "A": "ADOM mode is configured with Advanced mode.",
+      "B": "A trusted host is configured.",
+      "C": "fortinet is assigned the default Standard_User administrative profile.",
+      "D": "fortinet is assigned the default Restricted_User administrative profile."
+    },
+    "answers": ["C"],
+    "explanation": "The Standard_User profile allows viewing logs and performing some device management tasks but typically does not allow configuring global settings like creating a mail server for alert emails. To create a mail server, the administrator would need to have a profile with higher privileges, such as Super_User or a custom profile with the necessary permissions."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two parameters are used to calculate the Total Quota value available on FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Used storage",
+      "B": "Retention policy",
+      "C": "Reserved space",
+      "D": "Total system storage"
+    },
+    "answers": ["C","D"],
+    "explanation": "The Total Quota is derived from the total system storage minus any reserved space allocated for system use, such as databases, system files, or reserved space for log retention policies. Used storage and retention policies do not directly impact the calculation of the quota available, though they can influence overall space utilization."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two settings must you configure on FortiAnalyzer to allow non-local administrators to authenticate on FortiAnalyzer with any user account in a single LDAP group? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "A local wildcard administrator account",
+      "B": "An administrator group",
+      "C": "One or more remote LDAP servers",
+      "D": "LDAP servers IP addresses added as trusted hosts"
+    },
+    "answers": ["A","C"],
+    "explanation": "A wildcard administrator account allows any user from the specified LDAP group to authenticate, and the remote LDAP servers must be configured to validate those user credentials. The combination of these settings enables authentication via LDAP for non-local users."
+    ,"reference" : ""
+  },
+    {
+    "question": "An administrator has moved a FortiGate device from the root ADOM to ADOM1.\nWhich two statements are true regarding logs? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Analytics logs will be moved to ADOM1 from the root ADOM automatically.",
+      "B": "Archived logs will be moved to ADOM1 from the root ADOM automatically.",
+      "C": "Logs will be present in both ADOMs immediately after the move.",
+      "D": "Analytics logs will be moved to ADOM1 from the root ADOM after you rebuild the database."
+    },
+    "answers": ["A","D"],
+    "explanation": "When a device is moved from one ADOM to another, analytics logs can be moved automatically, but you may need to rebuild the database for the logs to be fully transferred and usable in the new ADOM. Archived logs, however, do not move automatically between ADOMs."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which statement about the communication between FortiGate high availability (HA) clusters and FortiAnalyzer is true?",
+    "question_image": "",
+    "options": {
+      "A": "If devices were registered to FortiAnalyzer before forming a cluster, you can manually add them together.",
+      "B": "FortiAnalyzer distinguishes each cluster member by the IP addresses in log message headers.",
+      "C": "If the HA primary device becomes unavailable, you must remove it from the HA cluster list on FortiAnalyzer.",
+      "D": "The FortiGate HA cluster must be in active-passive mode in order to avoid conflict."
+    },
+    "answers": ["B"],
+    "explanation": "This allows FortiAnalyzer to correctly identify and process logs from different members of the HA cluster."
+    ,"reference" : ""
+  },
+    {
+    "question": "What is the best approach to handle a hard disk failure on a FortiAnalyzer that supports hardware RAID?",
+    "question_image": "",
+    "options": {
+      "A": "There is no need to do anything because the disk will self-recover",
+      "B": "Run execute format disk to format and restart the FortiAnalyzer device.",
+      "C": "Perform a hot swap of the disk.",
+      "D": "Shut down FortiAnalyzer and replace the disk."
+    },
+    "answers": ["C"],
+    "explanation": "In a RAID configuration, especially when hot-swapping is supported, you can replace a failed disk without shutting down the device. The RAID array will automatically rebuild once the new disk is inserted, minimizing downtime and maintaining data integrity."
+    ,"reference" : ""
+  },
+    {
+    "question": "An administrator has configured the following settings:\nWhat is the purpose of executing these commands?",
+    "question_image": "images/quiz17.png",
+    "options": {
+      "A": "To record the hash value and authentication code of log files.",
+      "B": "To encrypt log transfer between FortiAnalyzer and other devices.",
+      "C": "To create the secure channel used by the OFTP process.",
+      "D": "To verify the integrity of the log files received."
+    },
+    "answers": ["A"],
+    "explanation": "The command set log-checksum md5-auth configures FortiAnalyzer to generate an MD5 hash for each log file, along with an authentication code. This ensures that the integrity of the logs can be verified, confirming that the logs have not been tampered with."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which statement correctly describes RAID 10 (1+0) on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "A configuration with four disks, each with 2 TB of capacity, provides a total space of 4 TB.",
+      "B": "11 combines mirroring striping and distributed parity to provide performance and fault tolerance",
+      "C": "A configuration with four disks, each with 2 TB of capacity, provides a total space of 2 TB.",
+      "D": "It uses striping to provide performance and fault tolerance."
+    },
+    "answers": ["A"],
+    "explanation": "RAID 10 combines mirroring (RAID 1) and striping (RAID 0). In a RAID 10 setup with four disks, data is mirrored across two pairs of disks, and those pairs are striped for performance. This results in improved performance and fault tolerance, but the total usable storage is 50% of the total raw storage, meaning four 2 TB disks provide 4 TB of usable space."
+    ,"reference" : ""
+  },
+    {
+    "question": "The administrator wants to join this FortiAnalyzer to an existing HA cluster. What can you conclude from the configuration displayed?",
+    "question_image": "images/quiz19.png",
+    "options": {
+      "A": "After joining the cluster, this FortiAnalyzer will forward received logs to its peers.",
+      "B": "This FortiAnalyzer will trigger a failover after losing communication with its peers for 10 seconds.",
+      "C": "This FortiAnalyzer is configured to route HA traffic through a gateway.",
+      "D": "This FortiAnalyzer will join the existing HA cluster as the secondary."
+    },
+    "answers": ["B"],
+    "explanation": "The \"Preferred Role\" is set to Secondary, which means this FortiAnalyzer is configured to join the cluster as the secondary unit in an Active-Passive HA configuration. Other settings, such as the peer IP and serial number, confirm its setup to communicate with the primary unit."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two parameters impact the amount of reserved disk space required by FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Total quota",
+      "B": "License type",
+      "C": "RAID level",
+      "D": "Disk size"
+    },
+    "answers": ["C"],
+    "explanation": "RAID level affects how much disk space is reserved for redundancy and fault tolerance. For example, RAID 1 mirrors data, meaning you need more space for redundancy, while RAID 5 or RAID 6 reserves space for parity.\nDisk size directly influences the total available and reserved space since the larger the disk, the more space may need to be reserved for system functions, logs, and other operations.\nThe total quota and license type do not directly impact the reserved disk space, though they do influence other aspects of capacity and functionality."
+    ,"reference" : ""
+  },
+    {
+    "question": "The exhibit shows the creation of a new administrator on FortiAnalyzer. The new account uses the credentials stored on an LDAP server. Why would an administrator configure a password for this account?",
+    "question_image": "images/quiz21.png",
+    "options": {
+      "A": "This password is used if the authentication server becomes unreachable.",
+      "B": "This password authenticates FortiAnalyzer aqainst the LDAP server.",
+      "C": "This password is set to comply with FortiAnalvzer password policy",
+      "D": "This password is required because this is a restricted user."
+    },
+    "answers": ["A"],
+    "explanation": "When using LDAP for authentication, a password can be set locally on FortiAnalyzer as a fallback option in case the LDAP server becomes unreachable. This ensures that the administrator can still log in if there are issues with the LDAP server."
+    ,"reference" : ""
+  },
+    {
+    "question": "In a Fortinet Security Fabric, what can make an upstream FortiGate create traffic logs associated with sessions initiated on downstream FortiGate devices?",
+    "question_image": "",
+    "options": {
+      "A": "The traffic destination is another FortiGate in the fabric.",
+      "B": "The upstream FortiGate is configured to do NAT",
+      "C": "Log redundancy is configured in the fabric.",
+      "D": "The downstream device cannot connect to FortiAnalyzer."
+    },
+    "answers": ["B"],
+    "explanation": "When the upstream FortiGate is performing Network Address Translation (NAT), it creates new session entries for traffic passing through it. As a result, it generates its own traffic logs for those sessions, even if the sessions were initiated on a downstream FortiGate. This is because the upstream FortiGate is altering the source IP address, making it responsible for tracking the session details."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two statements about high availability (HA) on FortiAnalyzer are true? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer HA supports synchronization of logs as well as some system and configuration settings.",
+      "B": "FortiAnalyzer HA active-passive mode can function without VRRP.",
+      "C": "All devices in a FortiAnalyzer HA cluster must run in the same operation mode, either analyzer mode or collector mode.",
+      "D": "All devices in a FortiAnalyzer HA cluster must have the same available disk space."
+    },
+    "answers": ["A"],
+    "explanation": "The two correct statements about high availability (HA) on FortiAnalyzer are:\nFortiAnalyzer HA supports synchronization of logs as well as some system and configuration settings.\nFortiAnalyzer HA synchronizes both logs and certain system configuration settings between the units in the cluster to ensure consistent operation.\nAll devices in a FortiAnalyzer HA cluster must run in the same operation mode, either analyzer mode or collector mode.\nIn an HA cluster, all devices must be configured to operat` e in the same mode -- either analyzer mode or collector mode--to ensure consistency and proper functionality across the cluster.\nThe other options, such as VRRP, are not required for HA in FortiAnalyzer, and disk space can vary between nodes but may impact log storage capacity."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two statements about deleting ADOMs are true? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Logs must be purged or migrated before you can delete an ADOM.",
+      "B": "ADOMs with registered devices cannot be deleted.",
+      "C": "Default ADOMs cannot be deleted.",
+      "D": "The status of the ADOMs must be unlocked."
+    },
+    "answers": ["B"],
+    "explanation": "DOMs with registered devices cannot be deleted.\nAn ADOM cannot be deleted if it has registered devices. You must first remove or deregister the devices before deleting the ADOM.\nThe status of the ADOMs must be unlocked.\nAn ADOM must be in an unlocked state before it can be deleted. If the ADOM is locked, it will not allow deletion."
+    ,"reference" : ""
+  },
+    {
+    "question": "The capture displayed was taken on a FortiAnalyzer.\nWhy is a single IP address shown as the source for all logs received?",
+    "question_image": "images/quiz25.png",
+    "options": {
+      "A": "FortiAnalyzer is using the device MAC addresses to differentiate their logs.",
+      "B": "The logs belong to devices that are part of a high availability (HA) cluster.",
+      "C": "FortiAnalyzer is receiving logs from the root FortiGate of a Security Fabric.",
+      "D": "The device sending logs has two VDOMs in the same ADOM."
+    },
+    "answers": ["C"],
+    "explanation": "In a Fortinet Security Fabric, logs from downstream devices can be sent to FortiAnalyzer through the root FortiGate. This is why all the logs have the same source IP address (the root FortiGate). The root FortiGate aggregates and forwards the logs from all downstream devices, so the source IP in the log capture will appear to be from the root FortiGate itself, even though the logs originate from multiple devices within the fabric."
+    ,"reference" : ""
+  },
+    {
+    "question": "What does the disk status Degraded mean for RAID management?",
+    "question_image": "",
+    "options": {
+      "A": "The hard drive is no longer being used by the RAID controller.",
+      "B": "One or more drives are missing from the FortiAnalyzer unit.",
+      "C": "The device is writing data to the disk to restore the volume to an optimal state.",
+      "D": "FortiAnalyzer determined that the parity data in the disk is not valid."
+    },
+    "answers": ["B"],
+    "explanation": "When the RAID status is Degraded, it typically indicates that one or more drives in the RAID array have failed or are missing, causing the RAID array to operate with reduced redundancy. In this state, the array is still functioning, but it's at risk because the fault tolerance provided by RAID is compromised."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which process is responsible for enforcing the log file size?",
+    "question_image": "",
+    "options": {
+      "A": "oftpd",
+      "B": "miglogd",
+      "C": "sqlplugind",
+      "D": "logfiled"
+    },
+    "answers": ["D"],
+    "explanation": "The logfiled process is responsible for enforcing log file size and managing log rotation on FortiAnalyzer. It ensures that log files do not exceed the configured size limits and handles the creation and rotation of new log files when necessary."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two statements about FortiAnalyzer operating modes are true? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "When in collector mode, FortiAnalyzer offloads the log receiving task to the analyzer.",
+      "B": "When in analyzer mode, FortiAnalyzer supports event management and reporting features.",
+      "C": "For the collector, you should allocate most of the disk space to analytics logs.",
+      "D": "Analyzer mode is the default operating mode."
+    },
+    "answers": ["B"],
+    "explanation": "When in analyzer mode, FortiAnalyzer supports event management and reporting features.\nIn analyzer mode, FortiAnalyzer provides full support for log analysis, event management, and reporting capabilities.\nAnalyzer mode is the default operating mode.\nBy default, FortiAnalyzer operates in analyzer mode, which allows for log analysis and reporting.\nThe other options are incorrect because:\nIn collector mode, the FortiAnalyzer primarily stores logs and forwards them to another FortiAnalyzer in analyzer mode, not the other way around.\nIn collector mode, most disk space is usually allocated to storage rather than analytics, as the logs are primarily stored for forwarding."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two statements regarding FortiAnalyzer log forwarding modes are true? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Both modes, forwarding and aggregation, support encryption of logs between devices.",
+      "B": "In aggregation mode, you can forward logs to syslog and CEF servers.",
+      "C": "Forwarding mode forwards logs in real time only to other FortiAnalyzer devices.",
+      "D": "Aggregation mode stores logs and content files and uploads them to another FortiAnalyzer device at a scheduled time."
+    },
+    "answers": ["A","D"],
+    "explanation": "Both modes, forwarding and aggregation, support encryption of logs between devices.\nBoth forwarding and aggregation modes can use encryption to securely transfer logs between FortiAnalyzer devices.\nAggregation mode stores logs and content files and uploads them to another FortiAnalyzer device at a scheduled time.\nIn aggregation mode, logs are stored and then transferred to another FortiAnalyzer at a scheduled time, rather than in real-time. This mode is typically used when consolidating logs from multiple devices into a central FortiAnalyzer.\nThe other options are incorrect because:\nForwarding mode sends logs in real-time but not exclusively to other FortiAnalyzer devices; it can also send logs to external systems like syslog servers.\n Aggregation mode is primarily for consolidating logs to another FortiAnalyzer and doesn't focus on forwarding logs to syslog or CEF servers."
+    ,"reference" : ""
+  },
+    {
+    "question": "You are trying to initiate an authorization request from FortiGate to FortiAnalyzer, but the Security Fabric window does not open when you click Authorize.\nWhich two reasons can cause this to happen? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "pre-shared key needs to be established on both sides.",
+      "B": "The management computer does not have connectivity to the authorization IP address and port combination.",
+      "C": "The Security Fabric root is unauthorized and needs to be added as a trusted host.",
+      "D": "The fabric authorization settings on FortiAnalyzer are misconfigured."
+    },
+    "answers": ["B","D"],
+    "explanation": "The management computer does not have connectivity to the authorization IP address and port combination.\nIf there is no network connectivity between the management computer and the FortiAnalyzer on the specific IP address and port used for authorization, the Security Fabric window will not open.\nThe fabric authorization settings on FortiAnalyzer are misconfigured.\nIf the fabric authorization settings on FortiAnalyzer are not properly configured, FortiGate will not be able to initiate the authorization request, preventing the Security Fabric window from opening.\nThe other options are not applicable because:\nPre-shared keys are not required for initial authorization between FortiGate and FortiAnalyzer; they are typically used for establishing VPN tunnels.\nThe Security Fabric root does not need to be added as a trusted host to open the authorization window. Trusted hosts are more relevant to FortiGate's access control for management interfaces."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two methods can you use to restrict administrative access on FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Configure trusted hosts.",
+      "B": "Limit access to specific virtual domains.",
+      "C": "Fabric connectors to external LDAP servers.",
+      "D": "Use administrator profiles."
+    },
+    "answers": ["A","D"],
+    "explanation": "Configure trusted hosts.\nTrusted hosts restrict administrative access to FortiAnalyzer by limiting the IP addresses or subnets from which administrators can log in.\nUse administrator profiles.\nAdministrator profiles define roles and permissions, restricting what specific administrators can access and manage on FortiAnalyzer.\nThe other options are not applicable because:\nLimiting access to specific virtual domains is not applicable to FortiAnalyzer, as virtual domains (VDOMs) are a concept used in FortiGate, not FortiAnalyzer.\nFabric connectors to external LDAP servers are used for authentication purposes but do not directly restrict administrative access based on roles or IP addresses."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which statement when you are upgrading the firmware on an HA cluster made up of three FortiAnalyzer devices is true?",
+    "question_image": "",
+    "options": {
+      "A": "You can perform the firmware upgrade using only a console connection.",
+      "B": "All FortiAnalyzer devices will be upgraded at the same time.",
+      "C": "Enabling uninterruptible-upgrade prevents normal operations from being interrupted during the upgrade.",
+      "D": "First, upgrade the secondary devices, and then upgrade the primary device."
+    },
+    "answers": ["D"],
+    "explanation": "When upgrading firmware on an HA cluster of FortiAnalyzer devices, it is recommended to upgrade the secondary devices first, and then upgrade the primary device to minimize downtime and maintain continuity in log collection and other HA functions. This ensures that the primary device continues to handle operations while the secondary devices are being upgraded, and once the secondary devices are updated, the primary device can be upgraded with minimal service disruption."
+    ,"reference" : ""
+  },
+    {
+    "question": "What is the best approach to handle a hard disk failure on a FortiAnalyzer that supports hardware RAID?",
+    "question_image": "",
+    "options": {
+      "A": "There is no need to do anything because the disk will self-recover.",
+      "B": "Run execute format disk to format and restart the FortiAnalyzer device.",
+      "C": "Perform a hot swap of the disk.",
+      "D": "Shut down FortiAnalyzer and replace the disk."
+    },
+    "answers": ["C"],
+    "explanation": "In a hardware RAID setup, FortiAnalyzer supports hot swapping, which allows you to replace a failed disk without shutting down the device. The RAID controller will automatically rebuild the array using the new disk, minimizing downtime and maintaining data integrity."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which three RAID configurations provide fault tolerance on FortiAnalyzer? (Choose three.)",
+    "question_image": "",
+    "options": {
+      "A": "RAIDO",
+      "B": "RAID 5",
+      "C": "RAID1",
+      "D": "RAID 6+0",
+      "E": "RAID 0+0"
+    },
+    "answers": ["B","C","D"],
+    "explanation": "RAID 1 provides fault tolerance through disk mirroring.\nRAID 5 provides fault tolerance by using distributed parity across multiple disks.\nRAID 6+0 combines striping with double parity, offering enhanced fault tolerance.\nRAID 0 and RAID 0+0 do not provide any fault tolerance, as they focus on performance through data striping but offer no redundancy."
+    ,"reference" : ""
+  },
+    {
+    "question": "Based on the output, what can you conclude about the FortiAnalyzer logging status?",
+    "question_image": "images/quiz35.png",
+    "options": {
+      "A": "The connection between FortiGate and FortiAnalyzer is overloaded.",
+      "B": "FortiGate has logs to send, but FortiAnalyzer is unavailable.",
+      "C": "FortiGate is configured to send logs in batches.",
+      "D": "FortiGate is sending logs again after it performed a reboot."
+    },
+    "answers": ["B"],
+    "explanation": "The output shows that FortiGate has sent a large number of logs (sent=180189698), but some logs have failed to be sent (failed=4507). This suggests that FortiAnalyzer was temporarily unavailable or had an issue receiving logs, leading to the failure count. There are no logs cached or dropped, indicating FortiGate is still attempting to send logs but with some failures."
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two methods are the most common methods to control and restrict administrative access on FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Virtual domains",
+      "B": "Administrative access profiles",
+      "C": "Trusted hosts",
+      "D": "Security Fabric"
+    },
+    "answers": ["B","C"],
+    "explanation": "https://docs2.fortinet.com/document/fortianalyzer/6.0.0/administration-guide/219292/administrator-profiles\nhttps://docs2.fortinet.com/document/fortianalyzer/6.0.0/administration-guide/581222/trustedhosts"
+    ,"reference" : ""
+  },
+    {
+    "question": "Which daemon is responsible for enforcing raw log file size?",
+    "question_image": "",
+    "options": {
+      "A": "logfiled",
+      "B": "oftpd",
+      "C": "sqlplugind",
+      "D": "miglogd"
+    },
+    "answers": ["A"],
+    "explanation": ""
+    ,"reference" : ""
+  },
+    {
+    "question": "An administrator has configured the following settings:\nconfig system global set log-checksum md5-auth end\nWhat is the significance of executing this command?",
+    "question_image": "",
+    "options": {
+      "A": "This command records the log file MD5 hash value.",
+      "B": "This command records passwords in log files and encrypts them.",
+      "C": "This command encrypts log transfer between FortiAnalyzer and other devices.",
+      "D": "This command records the log file MD5 hash value and authentication code."
+    },
+    "answers": ["D"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.4.6/administration-guide/410387/appendix-blog-integrity-and-secure-log-transfer"
+    ,"reference" : ""
+  },
+    {
+    "question": "Which two of the following must you configure on FortiAnalyzer to email a FortiAnalyzer report externally? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Mail server",
+      "B": "Output profile",
+      "C": "SFTP server",
+      "D": "Report scheduling"
+    },
+    "answers": ["A","B"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.0.2/administration-guide/598322/creatingoutput-profiles"
+    ,"reference" : ""
+  },
+    {
+    "question": "For which two purposes would you use the command set log checksum? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "To help protect against man-in-the-middle attacks during log upload from FortiAnalyzer to an SFTP server",
+      "B": "To prevent log modification or tampering",
+      "C": "To encrypt log communications",
+      "D": "To send an identical set of logs to a second logging server"
+    },
+    "answers": ["A","B"],
+    "explanation": "To prevent logs from being tampered with while in storage, you can add a log checksum using the config system global command. You can configure FortiAnalyzer to record a log file hash value, timestamp, and authentication code when the log is rolled and archived and when the log is uploaded (if that feature is enabled). This can also help against man-in-the-middle only for the transmission from FortiAnalyzer to an\nSSH File Transfer Protocol (SFTP) server during log upload.\nFortiAnalyzer_7.0_Study_Guide-Online page 149"
+    ,"reference" : ""
+  },
+    {
+    "question": "What does the data point at 14:55 tell you?",
+    "question_image": "images/quiz41.png",
+    "options": {
+      "A": "The received rate is almost at its maximum for this device",
+      "B": "The sqlplugind daemon is behind in log indexing by two logs",
+      "C": "Logs are being dropped",
+      "D": "Raw logs are reaching FortiAnalyzer faster than they can be indexed"
+    },
+    "answers": ["D"],
+    "explanation": ""
+    ,"reference" : ""
+  },
+    {
+    "question": "You are using RAID with a FortiAnalyzer that supports software RAID, and one of the hard disks on\nFortiAnalyzer has failed.\nWhat is the recommended method to replace the disk?",
+    "question_image": "",
+    "options": {
+      "A": "Shut down FortiAnalyzer and then replace the disk",
+      "B": "Downgrade your RAID level, replace the disk, and then upgrade your RAID level",
+      "C": "Clear all RAID alarms and replace the disk while FortiAnalyzer is still running",
+      "D": "Perform a hot swap"
+    },
+    "answers": ["A"],
+    "explanation": "https://community.fortinet.com/t5/FortiAnalyzer/Technical-Note-How-to-swap-Hard-Disk-on-FortiAnalyzer/tap/194997?externalID=FD41397#:~:text=If%20a%20hard%20disk%20on,process%20known%20as%20 hot%20swapping"
+    ,"reference" : ""
+  },
+    {
+    "question": "On the RAID management page, the disk status is listed as Initializing.\nWhat does the status Initializing indicate about what the FortiAnalyzer is currently doing?",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer is ensuring that the parity data of a redundant drive is valid",
+      "B": "FortiAnalyzer is writing data to a newly added hard drive to restore it to an optimal state",
+      "C": "FortiAnalyzer is writing to all of its hard drives to make the array fault tolerant",
+      "D": "FortiAnalyzer is functioning normally"
+    },
+    "answers": ["C"],
+    "explanation": "https://fortinetweb.s3.amazonaws.com/docs.fortinet.com/v2/attachments/4cb0dce6-dbef-11e9-8977-00505692583a/FortiAnalyzer-5.6.10-Administration-Guide.pdf (40)"
+    ,"reference" : ""
+  },
+    {
+    "question": "In the FortiAnalyzer FortiView, source and destination IP addresses from FortiGate devices are not resolving to a hostname.\nHow can you resolve the source and destination IP addresses, without introducing any additional performance impact to FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "Resolve IP addresses on a per-ADOM basis to reduce delay on FortiView while IPs resolve",
+      "B": "Configure # set resolve-ip enable in the system FortiView settings",
+      "C": "Configure local DNS servers on FortiAnalyzer",
+      "D": "Resolve IP addresses on FortiGate"
+    },
+    "answers": ["D"],
+    "explanation": "https://packetplant.com/fortigate-and-fortianalyzer-resolve-source-and-destination-ip/ \n\"As a best practice, it is recommended to resolve IPs on the FortiGate end. This is because you get both source and destination, and it offloads the work from FortiAnalyzer. On FortiAnalyzer, this IP resolution does destination IPs only\""
+    ,"reference" : ""
+  },
+    {
+    "question": "You have recently grouped multiple FortiGate devices into a single ADOM. System Settings > Storage Info shows the quota used.\nWhat does the disk quota refer to?",
+    "question_image": "",
+    "options": {
+      "A": "The maximum disk utilization for each device in the ADOM",
+      "B": "The maximum disk utilization for the FortiAnalyzer model",
+      "C": "The maximum disk utilization for the ADOM type",
+      "D": "The maximum disk utilization for all devices in the ADOM"
+    },
+    "answers": ["D"],
+    "explanation": ""
+    ,"reference" : ""
+  },
+    {
+    "question": "Why should you use an NTP server on FortiAnalyzer and all registered devices that log into FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "To properly correlate logs",
+      "B": "To use real-time forwarding",
+      "C": "To resolve host names",
+      "D": "To improve DNS response times"
+    },
+    "answers": ["A"],
+    "explanation": "Synchoronize the the on FortiAnalyzer and all registered devices with an NTP server for proper log correlation"
+    ,"reference" : ""
+  },
+    {
+    "question": "You need to upgrade your FortiAnalyzer firmware.\nWhat happens to the logs being sent to FortiAnalyzer from FortiGate during the time FortiAnalyzer is temporarily unavailable?",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer uses log fetching to retrieve the logs when back online",
+      "B": "FortiGate uses the miglogd process to cache the logs",
+      "C": "The logfiled process stores logs in offline mode",
+      "D": "Logs are dropped"
+    },
+    "answers": ["B"],
+    "explanation": "If FortiAnalyzer becomes unavable to ForiGate for any reason, FortiGate uses its migioga process to cache the logs. There is a maximum value to the cache size, and the miglogd process will drop cached logs. When the connection between the two devices is restored, the miglogd process begins to send the cached logs to FortiAnalyzer. Therefore, the FortiGate buffer will keeps logs long enough to sustain a reboot of your FortiAnalyzer (if you are upgrading the firmware, for example). But it is not intended for a lengthy FortiAnalyzer outage."
+    ,"reference" : ""
+  },
+    {
+    "question": "After you have moved a registered logging device out of one ADOM and into a new ADOM, what is the purpose of running the following CLI command?\nexecute sql-local rebuild-adom <new-ADOM-name>",
+    "question_image": "",
+    "options": {
+      "A": "To reset the disk quota enforcement to default",
+      "B": "To remove the analytics logs of the device from the old database",
+      "C": "To migrate the archive logs to the new ADOM",
+      "D": "To populate the new ADOM with analytical logs for the moved device, so you can run reports"
+    },
+    "answers": ["D"],
+    "explanation": "Are the device's analytics logs required for reports in the new ADOM? If so, rebuild the new ADOM database:\n# exe sql-local rebuild-adom <new-ADOM-name>\nFortiAnalyzer_7.0_Study_Guide-Online.pdf page 128: Are the device analytics logs required for reports in the new ADOM? If so, rebuild the new ADOM database"
+    ,"reference" : ""
+  },
+    {
+    "question": "If a hard disk fails on a FortiAnalyzer that supports software RAID, what should you do to bring the FortiAnalyzer back to functioning normally, without losing data?",
+    "question_image": "",
+    "options": {
+      "A": "Hot swap the disk",
+      "B": "Replace the disk and rebuild the RAID manually",
+      "C": "Take no action if the RAID level supports a failed disk",
+      "D": "Shut down FortiAnalyzer and replace the disk"
+    },
+    "answers": ["D"],
+    "explanation": "https://kb.fortinet.com/kb/documentLink.do?externalID=FD46446#:~:text=On%20FortiAnalyzer%2FFortiManager%20devices%20that,to%20exchanging%20the%20hard%20disk.\nIf a hard disk on a FortiAnalyzer unit fails, it must be replaced. On FortiAnalyzer devices that support hardware RAID, the hard disk can be replaced while the unit is still running - known as hot swapping. On FortiAnalyzer units with software RAID, the device must be shutdown prior to exchanging the hard disk.\n"
+    ,"reference" : "https://community.fortinet.com/t5/FortiAnalyzer/Technical-Note-How-to-swap-Hard-Disk-on-FortiAnalyzer/ta-p/194997?externalID=FD41397#:~:text=If%20a%20hard%20disk%20on,process%20known%20as%20hot%20swapping" 
+  },
+    {
+    "question": "If you upgrade the FortiAnalyzer firmware, which report element can be affected?",
+    "question_image": "",
+    "options": {
+      "A": "Custom datasets",
+      "B": "Report scheduling",
+      "C": "Report settings",
+      "D": "Output profiles"
+    },
+    "answers": ["A"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/upgrade-guide/669300/checking-reports"
+    ,"reference" : ""
+  },
+    {
+    "question": "FortiAnalyzer reports are dropping analytical data from 15 days ago, even though the data policy setting for analytics logs is 60 days.\nWhat is the most likely problem?",
+    "question_image": "",
+    "options": {
+      "A": "Quota enforcement is acting on analytical data before a report is complete",
+      "B": "Logs are rolling before the report is run",
+      "C": "CPU resources are too high",
+      "D": "Disk utilization for archive logs is set for 15 days"
+    },
+    "answers": ["B"],
+    "explanation": ""
+    ,"reference" : "https://forum.fortinet.com/tm.aspx?m=138806"
+  },
+    {
+    "question": "Which log type does the FortiAnalyzer indicators of compromise feature use to identify infected hosts?",
+    "question_image": "",
+    "options": {
+      "A": "Antivirus logs",
+      "B": "Web filter logs",
+      "C": "IPS logs",
+      "D": "Application control logs"
+    },
+    "answers": ["B"],
+    "explanation": ""
+    ,"reference" : "https://kb.fortinet.com/kb/documentLink.do?externalID=FD38567"
+  },
+    {
+    "question": "When you perform a system backup, what does the backup configuration contain? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Generated reports",
+      "B": "Device list",
+      "C": "Authorized devices logs",
+      "D": "System information"
+    },
+    "answers": ["B","D"],
+    "explanation": "https://help.fortinet.com/fa/cli-olh/5-6-5/Content/Document/1400_execute/backup.html"
+    ,"reference" : "https://help.fortinet.com/fauth/5-2/Content/Admin%20Guides/5_2%20Admin%20Guide/300/301_Dashboard.html"
+  },
+    {
+    "question": "Which clause is considered mandatory in SELECT statements used by the FortiAnalyzer to generate reports?",
+    "question_image": "",
+    "options": {
+      "A": "FROM",
+      "B": "LIMIT",
+      "C": "WHERE",
+      "D": "ORDER BY"
+    },
+    "answers": ["A"],
+    "explanation": "FROM Is the only mandatory dause required to form a SELECT statement; the rest of the clauses are optional and serve to fiter or limit, aggregate or combine, and control the sort. It is also important to note the clauses must be coded in a specific sequence. Accordingly, following the sELEct keyword, the statement must be followed by one or more clauses in the order in which they appear in the table shown on this slide. For example, you can't use the WHERE dause before the FROM dause. You don't have to use all optional clauses, but whichever ones you do use must be in the correct sequence."
+    ,"reference" : "https://kb.fortinet.com/kb/documentLink.do?externalID=FD48500"
+  },
+    {
+    "question": "What is the purpose of a dataset query in FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "It sorts log data into tables",
+      "B": "It extracts the database schema",
+      "C": "It retrieves log data from the database",
+      "D": "It injects log data into the database"
+    },
+    "answers": ["C"],
+    "explanation": ""
+    ,"reference" : "https://docs2.fortinet.com/document/fortianalyzer/6.0.4/administrationguide/148744/creating-datasets"
+  },
+    {
+    "question": "Logs are being deleted from one of the ADOMs earlier than the configured setting for archiving in the data policy.\nWhat is the most likely problem?",
+    "question_image": "",
+    "options": {
+      "A": "CPU resources are too high",
+      "B": "Logs in that ADOM are being forwarded, in real-time, to another FortiAnalyzer device",
+      "C": "The total disk space is insufficient and you need to add other disk",
+      "D": "The ADOM disk quota is set too low, based on log rates"
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : "https://help.fortinet.com/fmgr/50hlp/56/5-6-1/FMGFAZ/1100_Storage/0017_Deleted%20device%20logs.html"
+  },
+    {
+    "question": "Which two constraints can impact the amount of reserved disk space required by FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "License type",
+      "B": "Disk size",
+      "C": "Total quota",
+      "D": "RAID level"
+    },
+    "answers": ["B","D"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/368682/disk-space-allocation",
+    "reference" : ""
+  },
+    {
+    "question": "What does the 1000MB maximum for disk utilization refer to?",
+    "question_image": "images/quiz59.png",
+    "options": {
+      "A": "The disk quota for the FortiAnalyzer model",
+      "B": "The disk quota for all devices in the ADOM",
+      "C": "The disk quota for each device in the ADOM",
+      "D": "The disk quota for the ADOM type"
+    },
+    "answers": ["B"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.0/administration-guide/743670/configuring-log-storage-policy",
+    "reference" : ""
+  },
+  {
+    "question": "You've moved a registered logging device out of one ADOM and into a new ADOM. What happens when you rebuild the new ADOM database?",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer resets the disk quota of the new ADOM to default.",
+      "B": "FortiAnalyzer migrates archive logs to the new ADOM.",
+      "C": "FortiAnalyzer migrates analytics logs to the new ADOM.",
+      "D": "FortiAnalyzer removes logs from the old ADOM."
+    },
+    "answers": ["C"],
+    "explanation": "https://kb.fortinet.com/kb/documentLink.do?externalID=FD40383",
+    "reference" : ""
+  },
+  {
+    "question": "What happens when a log file saved on FortiAnalyzer disks reaches the size specified in the device log settings?",
+    "question_image": "",
+    "options": {
+      "A": "The log file is stored as a raw log and is available for analytic support.",
+      "B": "The log file rolls over and is archived.",
+      "C": "The log file is purged from the database.",
+      "D": "The log file is overwritten."
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : "https://fortinetweb.s3.amazonaws.com/docs.fortinet.com/v2/attachments/6d9f8fb5-6cf4-11e9-81a4-00505692583a/FortiAnalyzer-6.0.5-Administration-Guide.pdf \nhttps://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/355632/log-browse"
+  },
+  {
+    "question": "What is the purpose of employing RAID with FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "To introduce redundancy to your log data",
+      "B": "To provide data separation between ADOMs",
+      "C": "To separate analytical and archive data",
+      "D": "To back up your logs"
+    },
+    "answers": ["A"],
+    "explanation": "https://en.wikipedia.org/wiki/RAID#:~:text=RAID%20(%22Redundant%20Array%20of%20Inexpensive,%2C%20performance%20improvement%2C%20or%20both.",
+    "reference" : ""
+  },
+  {
+    "question": "Which FortiAnalyzer feature allows you to retrieve the archived logs matching a specific timeframe from another FortiAnalyzer device?",
+    "question_image": "",
+    "options": {
+      "A": "Log upload",
+      "B": "Indicators of Compromise",
+      "C": "Log forwarding an aggregation mode",
+      "D": " Log fetching"
+    },
+    "answers": ["D"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.0/administration-guide/651442/fetcher-management",
+    "reference" : ""
+  },
+  {
+    "question": "What is the recommended method of expanding disk space on a FortiAnalyzer VM?",
+    "question_image": "",
+    "options": {
+      "A": "From the VM host manager, add an additional virtual disk and use the #execute lvm extend <disk number> command to expand the storage",
+      "B": "From the VM host manager, expand the size of the existing virtual disk",
+      "C": "From the VM host manager, expand the size of the existing virtual disk and use the #execute format disk command to reformat the disk",
+      "D": "From the VM host manager, add an additional virtual disk and rebuild your RAID array"
+    },
+    "answers": ["A"],
+    "explanation": "https://kb.fortinet.com/kb/documentLink.do?externalID=FD40848",
+    "reference" : ""
+  },
+  {
+    "question": "How are logs forwarded when FortiAnalyzer is using aggregation mode?",
+    "question_image": "",
+    "options": {
+      "A": "Logs are forwarded as they are received and content files are uploaded at a scheduled time.",
+      "B": "Logs and content files are stored and uploaded at a scheduled time.",
+      "C": "Logs are forwarded as they are received.",
+      "D": "Logs and content files are forwarded as they are received."
+    },
+    "answers": ["B"],
+    "explanation": "https://www.fortinetguru.com/2020/07/log-forwarding-fortianalyzer-fortios-6-2-3/ \nhttps://docs.fortinet.com/document/fortianalyzer/6.2.0/administration-guide/420493/modes",
+    "reference" : "https://docs.fortinet.com/document/fortianalyzer/6.2.0/cookbook/63238/what-is-the-difference-between-log-forward-and-log-aggregation-modes"
+  },
+  {
+    "question": "How do you restrict an administrator's access to a subset of your organization's ADOMs?",
+    "question_image": "",
+    "options": {
+      "A": "Set the ADOM mode to Advanced",
+      "B": "Assign the ADOMs to the administrator's account",
+      "C": "Configure trusted hosts",
+      "D": "Assign the default Super_User administrator profile"
+    },
+    "answers": ["B"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/717578/assigning-administrators-to-an-ado",
+    "reference" : ""
+  },
+  {
+    "question": "In order for FortiAnalyzer to collect logs from a FortiGate device, what configuration is required? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Remote logging must be enabled on FortiGate",
+      "B": "Log encryption must be enabled",
+      "C": "ADOMs must be enabled",
+      "D": "FortiGate must be registered with FortiAnalyzer"
+    },
+    "answers": ["A","D"],
+    "explanation": "Pg 70: \"after you add and register a FortiGate device with the FortiAnalyzer unit, you must also ensure that the FortiGate device is configured to send logs to the FortiAnalyzer unit.\"\nhttps://docs.fortinet.com/uploaded/files/4614/FortiAnalyzer-5.4.6-Administration%20Guide.pdf\nPg 45: \"ADOMs must be enabled to support the logging and reporting of NON-FORTIGATE devices, such as FortiCarrier, FortiClientEMS, FortiMail, FortiWeb, FortiCache, and FortiSandbox.\"",
+    "reference" : ""
+  },
+  {
+    "question": "What can the CLI command # diagnose test application oftpd 3 help you to determine?",
+    "question_image": "",
+    "options": {
+      "A": "What devices and IP addresses are connecting to FortiAnalyzer",
+      "B": "What logs, if any, are reaching FortiAnalyzer",
+      "C": "What ADOMs are enabled and configured",
+      "D": " What devices are registered and unregistered"
+    },
+    "answers": ["A"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/cli-reference/395556/test#test_application",
+    "reference" : ""
+  },
+  {
+    "question": "What FortiView tool can you use to automatically build a dataset and chart based on a filtered search result?",
+    "question_image": "",
+    "options": {
+      "A": "Chart Builder",
+      "B": "Export to Report Chart",
+      "C": "Dataset Library",
+      "D": "Custom View"
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "In FortiAnalyzer's FormView, source and destination IP addresses from FortiGate devices are not resolving to a hostname. How can you resolve the source and destination IPs, without introducing any additional performance impact to FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "Configure local DNS servers on FortiAnalyzer",
+      "B": "Resolve IPs on FortiGate",
+      "C": "Configure # set resolve-ip enable in the system FortiView settings",
+      "D": "Resolve IPs on a per-ADOM basis to reduce delay on FortiView while IPs resolve"
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What must you configure on FortiAnalyzer to upload a FortiAnalyzer report to a supported external server? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "SFTP, FTP, or SCP server",
+      "B": "Mail server",
+      "C": "Output profile",
+      "D": "Report scheduling"
+    },
+    "answers": ["A","C"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.0.2/administration-guide/598322/creating-output-profiles",
+    "reference" : ""
+  },
+  {
+    "question": "Why is the total quota less than the total system storage?",
+    "question_image": "images/quiz72.png",
+    "options": {
+      "A": "3.6% of the system storage is already being used.",
+      "B": "Some space is reserved for system use, such as storage of compression files, upload files, and temporary report files",
+      "C": "The oftpd process has not archived the logs yet",
+      "D": "The logfiled process is just estimating the total quota"
+    },
+    "answers": ["B"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/368682/disk-space-allocation",
+    "reference" : ""
+  },
+  {
+    "question": "What purposes does the auto-cache setting on reports serve? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "To reduce report generation time",
+      "B": "To automatically update the hcache when new logs arrive",
+      "C": "To reduce the log insert lag rate",
+      "D": "To provide diagnostics on report generation time"
+    },
+    "answers": ["A","B"],
+    "explanation": "",
+    "reference" : "https://docs.fortinet.com/document/fortianalyzer/6.0.0/administration-guide/282280/enabling-autocache"
+  },
+  {
+    "question": "If you upgrade your FortiAnalyzer firmware, what report elements can be affected?",
+    "question_image": "",
+    "options": {
+      "A": "Output profiles",
+      "B": "Report settings",
+      "C": "Report scheduling",
+      "D": "Custom datasets"
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "How does FortiAnalyzer retrieve specific log data from the database?",
+    "question_image": "",
+    "options": {
+      "A": "SQL FROM statement",
+      "B": "SQL GET statement",
+      "C": "SQL SELECT statement",
+      "D": "SQL EXTRACT statement"
+    },
+    "answers": ["A"],
+    "explanation": "https://fortinetweb.s3.amazonaws.com/docs.fortinet.com/v2/attachments/137bb60e-ff37-11e8-8524-f8bc1258b856/fortianalyzer-fortigate-sql-technote-40-mr2.pdf",
+    "reference" : ""
+  },
+  {
+    "question": "On FortiAnalyzer, what is a wildcard administrator account?",
+    "question_image": "",
+    "options": {
+      "A": "An account that permits access to members of an LDAP group",
+      "B": "An account that allows guest access with read-only privileges",
+      "C": "An account that requires two-factor authentication",
+      "D": "An account that validates against any user account on a FortiAuthenticator"
+    },
+    "answers": ["A"],
+    "explanation": "https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/747268/configuring-wildcard-admin-accounts",
+    "reference" : ""
+  },
+  {
+    "question": "For proper log correlation between the logging devices and FortiAnalyzer, FortiAnalyzer and all registered devices should:",
+    "question_image": "",
+    "options": {
+      "A": "Use DNS",
+      "B": "Use host name resolution",
+      "C": "Use real-time forwarding",
+      "D": "Use an NTP server"
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What FortiGate process caches logs when FortiAnalyzer is not reachable?",
+    "question_image": "",
+    "options": {
+      "A": "logfiled",
+      "B": "sqlplugind",
+      "C": "oftpd",
+      "D": "miglogd"
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : "https://forum.fortinet.com/tm.aspx?m=143106"
+  },
+  {
+    "question": "FortiAnalyzer uses the Optimized Fabric Transfer Protocok (OFTP) over SSL for what purpose?",
+    "question_image": "",
+    "options": {
+      "A": "To upload logs to an SFTP server",
+      "B": "To prevent log modification during backup",
+      "C": "To send an identical set of logs to a second logging server",
+      "D": "To encrypt log communication between devices"
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "How can you configure FortiAnalyzer to permit administrator logins from only specific locations?",
+    "question_image": "",
+    "options": {
+      "A": "Use static routes",
+      "B": "Use administrative profiles",
+      "C": "Use trusted hosts",
+      "D": "Use secure protocols"
+    },
+    "answers": ["C"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/186508/trusted-hosts",
+    "reference" : ""
+  },
+  {
+    "question": "Logs are being deleted from one of your ADOMs earlier that the configured setting for archiving in your data policy. \nWhat is the most likely problem?",
+    "question_image": "",
+    "options": {
+      "A": "The total disk space is insufficient and you need to add other disk.",
+      "B": "CPU resources are too high.",
+      "C": "The ADOM disk quota is set too low based on log rates.",
+      "D": "Logs in that ADOM are being forwarded in real-time to another FortiAnalyzer device."
+    },
+    "answers": ["C"],
+    "explanation": "https://help.fortinet.com/fmgr/50hlp/56/5-6-1/FMGFAZ/1100_Storage/0017_Deleted%20device%20logs.html \nhttps://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/87802/automatic-deletion",
+    "reference" : ""
+  },
+  {
+    "question": "What is the purpose of the following CLI command?",
+    "question_image": "images/quiz82.png",
+    "options": {
+      "A": "To add a log file checksum",
+      "B": "To add the MD's hash value and authentication code",
+      "C": "To add a unique tag to each log to prove that it came from this FortiAnalyzer",
+      "D": "To encrypt log communications"
+    },
+    "answers": ["A"],
+    "explanation": "https://docs2.fortinet.com/document/fortianalyzer/6.0.3/cli-reference/849211/global",
+    "reference" : ""
+  },
+  {
+    "question": "What does the data point at 14:35 tell you?",
+    "question_image": "images/quiz83.png",
+    "options": {
+      "A": "FortiAnalyzer is dropping logs.",
+      "B": "FortiAnalyzer is indexing logs faster than logs are being received.",
+      "C": "FortiAnalyzer has temporarily stopped receiving logs so older logs' can be indexed.",
+      "D": " The sqlplugind daemon is ahead in indexing by one log."
+    },
+    "answers": ["B"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/47690/insert-rate-vs-receive-rate-widget",
+    "reference" : ""
+  },
+  {
+    "question": "What remote authentication servers can you configure to validate your FortiAnalyzer administrator logons? (Choose three)",
+    "question_image": "",
+    "options": {
+      "A": "RADIUS",
+      "B": "Local",
+      "C": "LDAP",
+      "D": "PKI",
+      "E": "TACACS+"
+    },
+    "answers": ["A","C","E"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What statements are true regarding disk log quota? (Choose two)",
+    "question_image": "",
+    "options": {
+      "A": "The FortiAnalyzer stops logging once the disk log quota is met.",
+      "B": "The FortiAnalyzer automatically sets the disk log quota based on the device.",
+      "C": "The FortiAnalyzer can overwrite the oldest logs or stop logging once the disk log quota is met.",
+      "D": "The FortiAnalyzer disk log quota is configurable, but has a minimum o 100mb a maximum based on the reserved system space."
+    },
+    "answers": ["C","D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What statements are true regarding FortiAnalyzer 's treatment of high availability (HA) dusters? (Choose two)",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer distinguishes different devices by their serial number.",
+      "B": "FortiAnalyzer receives logs from d devices in a duster.",
+      "C": " FortiAnalyzer receives bgs only from the primary device in the cluster.",
+      "D": "FortiAnalyzer only needs to know (he serial number of the primary device in the cluster-it automaticaly discovers the other devices."
+    },
+    "answers": ["A","B"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What are the operating modes of FortiAnalyzer? (Choose two)",
+    "question_image": "",
+    "options": {
+      "A": "Standalone",
+      "B": "Manager",
+      "C": "Analyzer",
+      "D": "Collector"
+    },
+    "answers": ["C","D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "Which statements are correct regarding FortiAnalyzer reports? (Choose two)",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer provides the ability to create custom reports.",
+      "B": "FortiAnalyzer glows you to schedule reports to run.",
+      "C": "FortiAnalyzer includes pre-defined reports only.",
+      "D": "FortiAnalyzer allows reporting for FortiGate devices only."
+    },
+    "answers": ["A","B"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "Which tabs do not appear when FortiAnalyzer is operating in Collector mode?",
+    "question_image": "",
+    "options": {
+      "A": "FortiView",
+      "B": "Event Management",
+      "C": "Device Manger",
+      "D": "Reporting"
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "FortiAnalyzer centralizes which functions? (Choose three)",
+    "question_image": "",
+    "options": {
+      "A": "Network analysis",
+      "B": "Graphical reporting",
+      "C": "Content archiving / data mining",
+      "D": "Vulnerability assessment",
+      "E": "Security log analysis / forensics"
+    },
+    "answers": ["B","C","E"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "By default, what happens when a log file reaches its maximum file size?",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer overwrites the log files.",
+      "B": "FortiAnalyzer stops logging.",
+      "C": "FortiAnalyzer rolls the active log by renaming the file.",
+      "D": "FortiAnalyzer forwards logs to syslog."
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "Which statements are true of Administrative Domains (ADOMs) in FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "ADOMs are enabled by default.",
+      "B": "ADOMs constrain other administrator's access privileges to a subset of devices in the device list.",
+      "C": "Once enabled, the Device Manager, FortiView, Event Management, and Reports tab display per ADOM.",
+      "D": "All administrators can create ADOMs--not just the admin administrator."
+    },
+    "answers": ["B","C"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "Which statements are true regarding securing communications between FortiAnalyzer and FortiGate with SSL? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "SSL is the default setting.",
+      "B": "SSL communications are auto-negotiated between the two devices.",
+      "C": "SSL can send logs in real-time only.",
+      "D": "SSL encryption levels are globally set on FortiAnalyzer.",
+      "E": "FortiAnalyzer encryption level must be equal to, or higher than, FortiGate."
+    },
+    "answers": ["A","D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What are two of the key features of FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Centralized log repository",
+      "B": "Cloud-based management",
+      "C": "Reports",
+      "D": "Virtual domains (VDOMs)"
+    },
+    "answers": ["A","C"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What statements are true regarding the \"store and upload\" log transfer option between FortiAnalyzer and FortiGate? (Choose three.)",
+    "question_image": "",
+    "options": {
+      "A": "All FortiGates can send logs to FortiAnalyzer using the store and upload option.",
+      "B": "Only FortiGate models with hard disks can send logs to FortiAnalyzer using the store and upload option.",
+      "C": "Both secure communications methods (SSL and IPsec) allow the store and upload option.",
+      "D": "Disk logging is enabled on the FortiGate through the CLI only.",
+      "E": "Disk logging is enabled by default on the FortiGate."
+    },
+    "answers": ["B","C","D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "Which statements are true regarding securing communications between FortiAnalyzer and FortiGate with IPsec? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Must configure the FortiAnalyzer end of the tunnel only--the FortiGate end is auto-negotiated.",
+      "B": "Must establish an IPsec tunnel ID and pre-shared key.",
+      "C": "IPsec cannot be enabled if SSL is enabled as well.",
+      "D": "IPsec is only enabled through the CLI on FortiAnalyzer."
+    },
+    "answers": ["B","D"],
+    "explanation": "Option B is correct because you must establish an IPsec tunnel ID and pre-shared key to secure the communication between FortiAnalyzer and FortiGate with IPsec12. The tunnel ID is a unique identifier for each tunnel and the pre-shared key is a secret passphrase that authenticates the peers.\nOption D is correct because IPsec is only enabled through the CLI on FortiAnalyzer1. You cannot configure IPsec settings through the GUI on FortiAnalyzer.",
+    "reference" : ""
+  },
+  {
+    "question": "Which two statements about log forwarding are true? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Forwarded logs cannot be filtered to match specific criteria.",
+      "B": "Logs are forwarded in real-time only.",
+      "C": "The client retains a local copy of the logs after forwarding.",
+      "D": "You can use aggregation mode only with another FortiAnalyzer."
+    },
+    "answers": ["C","D"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/420493/modes \nhttps://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/621804/log-forwarding",
+    "reference" : ""
+  },
+  {
+    "question": "Which two methods can you use to send event notifications when an event occurs that matches a configured event handler? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "SMS",
+      "B": "Email",
+      "C": "SNMP",
+      "D": "IM"
+    },
+    "answers": ["B","C"],
+    "explanation": "https://help.fortinet.com/fa/faz50hlp/60/6-0-2/Content/FortiAnalyzer_Admin_Guide/1800_Events/0200_Event_handlers/0600_Create_event_handlers.html",
+    "reference" : "https://help.fortinet.com/fa/faz50hlp/60/6-0-2/Content/FortiAnalyzer_Admin_Guide/1800_Events/0200_Event_handlers/0600_Create_event_handlers.html"
+  },
+  {
+    "question": "What is the purpose of the command?",
+    "question_image": "images/quiz99.png",
+    "options": {
+      "A": "To add a unique tag to each log to prove that it came from this FortiAnalyzer",
+      "B": "To add the MD5 hash value and authentication code",
+      "C": "To add a log file checksum",
+      "D": "To encrypt log communications"
+    },
+    "answers": ["C"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/cli-reference/849211/global",
+    "reference" : ""
+  },
+  {
+    "question": "What is the main purpose of using an NTP server on FortiAnalyzer and all of its registered devices?",
+    "question_image": "",
+    "options": {
+      "A": "Log correlation",
+      "B": "Host name resolution",
+      "C": "Log collection",
+      "D": "Real-time forwarding"
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What are two advantages of setting up fabric ADOM? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "It can be used for fast data processing and log correlation",
+      "B": "It can be used to facilitate communication between devices in same Security Fabric",
+      "C": "It can include all Fortinet devices that are part of the same Security Fabric",
+      "D": "It can include only FortiGate devices that are part of the same Security Fabric"
+    },
+    "answers": ["A","C"],
+    "explanation": "https://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/448471/creating-a-security-fabric-adom",
+    "reference" : ""
+  },
+  {
+    "question": "What is the purpose of a predefined template on the FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "It can be edited and modified as required",
+      "B": "It specifies the report layout which contains predefined texts, charts, and macros",
+      "C": "It specifies report settings which contains time period, device selection, and schedule",
+      "D": "It contains predefined data to generate mock reports"
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : "https://help.fortinet.com/fa/faz50hlp/56/5-6-2/FMGFAZ/2300_Reports/0010_Predefined_reports.htm#:~:text=FortiAnalyzer%20includes%20a%20number%20of,create%20and%2For%20build%20reports.&text=A%20template%20populates%20the%20Layout,that%20is%20to%20be%20created. \nhttps://help.fortinet.com/fa/faz50hlp/56/5-6-2/FMG-FAZ/2300_Reports/0010_Predefined_reports.html"
+  },
+  {
+    "question": "For which two SAML roles can the FortiAnalyzer be configured? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Principal",
+      "B": "Service provider",
+      "C": "Identity collector",
+      "D": "Identity provider"
+    },
+    "answers": ["B","D"],
+    "explanation": "",
+    "reference" : "https://docs.fortinet.com/document/fortianalyzer/6.2.0/new-features/957811/saml-adminauthentication#:~:text=for%20the%20administrator.-,FortiAnalyzer%20can%20play%20the%20role%20of%20the%20identity%20provider%20(IdP,external%20identity%20provider%20is%20available.\nhttps://docs.fortinet.com/document/fortianalyzer/6.2.0/administration-guide/981386/saml-admin-authentication \nIn FortiAnalyzer, SAML can be enabled across all Security Fabric devices, enabling smooth movement between devices for the administrator by means of single sign-on (SSO).\nFortiAnalyzer can play the role of the identity provider (IdP), the service provider (SP), or Fabric SP, when an external identity provider is available.\nFortiAnalyzer_7.0_Study_Guide-Online pag. 48"
+  },
+  {
+    "question": "Which two purposes does the auto cache setting on reports serve? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "It automatically updates the hcache when new logs arrive.",
+      "B": "It provides diagnostics on report generation time.",
+      "C": "It reduces the log insert lag rate.",
+      "D": "It reduces report generation time."
+    },
+    "answers": ["A","D"],
+    "explanation": "",
+    "reference" : "https://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/384416/how-auto-cache-works \nhttps://docs.fortinet.com/document/fortianalyzer/6.2.5/administration-guide/86926/enabling-auto-cache"
+  },
+  {
+    "question": "What are offline logs on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "Compressed logs, which are also known as archive logs, are considered to be offline logs.",
+      "B": "When you restart FortiAnalyzer. all stored logs are considered to be offline logs.",
+      "C": " Logs that are indexed and stored in the SQL database.",
+      "D": "Logs that are collected from offline devices after they boot up."
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : "https://help.fortinet.com/fa/faz50hlp/56/5-6-6/Content/FortiAnalyzer_Admin_Guide/0300_Key_concepts/0600_Log_Storage/0400_Archive_anal ytics_logs.html \nLogs are received and saved in a log file on the FortiAnalyzer disks. Eventually, when the log file reaches a configured size, or at a set schedule, it is rolled over by being renamed. These files (rolled or otherwise) are known as archive logs and are considered offline so they don't offer immediate analytic support. Combined, they count toward the archive quota and retention limits, and they are deleted based on the ADOM data policy. FortiAnalyzer_7.0_Study_Guide-Online page 140"
+  },
+  {
+    "question": "Which two statements are true regarding log fetching on FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "A FortiAnalyzer device can perform either the fetch server or client role, and it can perform two roles at the same time with the same FortiAnalyzer devices at the other end.",
+      "B": "Log fetching can be done only on two FortiAnalyzer devices that are running the same firmware version.",
+      "C": "Log fetching allows the administrator to fetch analytics logs from another FortiAnalyzer for redundancy.",
+      "D": "Log fetching allows the administrator to run queries and reports against historical data by retrieving archived logs from one FortiAnalyzer device and sending them to another FortiAnalyzer device."
+    },
+    "answers": ["B","D"],
+    "explanation": "",
+    "reference" : "https://docs.fortinet.com/document/fortianalyzer/7.0.1/administration-guide/651442/fetcher-management \nUsing FortiAnalyzer, you can enable log fetching. This allows FortiAnalyzer to fetch the archived logs of specified devices from another FortiAnalyzer, which you can then run queries or reports on for forensic analysis. \nThe FortiAnalyzer device that fetches logs operates as the fetch client, and the other FortiAnalyzer device that sends logs operates as the fetch server. Log fetching can happen only between two FortiAnalyzer devices, and both of them must be running the same firmware version. A FortiAnalyzer device can perform either the fetch server or client role, and it can perform two roles at the same time with different FortiAnalyzer devices at the other end.\nFortiAnalyzer_7.0_Study_Guide-Online pag. 168"
+  },
+  {
+    "question": "An administrator has configured the following settings:\n config system fortiview settings set resolve-ip enable end\n What is the significance of executing this command?",
+    "question_image": "",
+    "options": {
+      "A": "Use this command only if the source IP addresses are not resolved on FortiGate.",
+      "B": "It resolves the source and destination IP addresses to a hostname in FortiView on FortiAnalyzer.",
+      "C": "You must configure local DNS servers on FortiGate for this command to resolve IP addresses on Forti Analyzer.",
+      "D": "It resolves the destination IP address to a hostname in FortiView on FortiAnalyzer."
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : "https://community.fortinet.com/t5/Fortinet-Forum/Hostnames-in-FortiAnalyzer/m-p/95351?m=156950"
+  },
+  {
+    "question": "Which two statements are true regarding ADOM modes? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "You can only change ADOM modes through CLI.",
+      "B": "In normal mode, the disk quota of the ADOM is fixed and cannot be modified, but in advance mode, the disk quota of the ADOM is flexible because new devices are added to the ADOM.",
+      "C": "In an advanced mode ADOM. you can assign FortiGate VDOMs from a single FortiGate device to multiple FortiAnalyzer ADOMs.",
+      "D": "Normal mode is the default ADOM mode."
+    },
+    "answers": ["C","D"],
+    "explanation": "",
+    "reference" : "https://help.fortinet.com/fa/faz50hlp/56/5-6-1/FMG-FAZ/0800_ADOMs/0400_ADOM%20Device%20Modes.html"
+  },
+  {
+    "question": "Which two statements are true regarding FortiAnalyzer log forwarding? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Both modes, forwarding and aggregation, support encryption of logs between devices.",
+      "B": "In aggregation mode, you can forward logs to syslog and CEF servers as well.",
+      "C": "Aggregation mode stores logs and content files and uploads them to another FortiAnalyzer device at a scheduled time.",
+      "D": "Forwarding mode forwards logs in real time only to other FortiAnalyzer devices."
+    },
+    "answers": ["A","C"],
+    "explanation": "A) FortiAnalyzer_7.0_Study_Guide-Online.pdf page 148: The log communication between devices can be protected by encryption, with the desired encryption level, using the commands shown on the slide. (You need to interpret this. \"Real time\" and \"aggregation\" is about the \"moment\" when Fortigate sends the logs. However, no matter the moment, Fortigate will upload logs encrypted or unencrypted based on previous / differente config). \nC) FortiAnalyzer_7.0_Study_Guide-Online.pdf page 147: Aggregation: Logs and content files stored and uploaded at scheduled time.",
+    "reference" : ""
+  },
+  {
+    "question": "An administrator has moved FortiGate A from the root ADOM to ADOM1. However, the administrator is not able to generate reports for FortiGate A in ADOM1. \nWhat should the administrator do to solve this issue?",
+    "question_image": "",
+    "options": {
+      "A": "Use the execute sql-local rebuild-db command to rebuild all ADOM databases.",
+      "B": "Use the execute sql-local rebuild-adom ADOM1 command to rebuild the ADOM database.",
+      "C": "Use the execute sql-report run ADOM1 command to run a report.",
+      "D": "Use the execute sql-local rebuild-adom root command to rebuild the ADOM database."
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : "https://help.fortinet.com/fmgr/cli/5-6-1/FortiManager_CLI_Reference/700_execute/sql-local+.html"
+  },
+  {
+    "question": "Which statement is true regarding Macros on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "Macros are ADOM specific and each ADOM will have unique macros relevant to that ADOM.",
+      "B": "Macros are supported only on the FortiGate ADOM.",
+      "C": "Macros are useful in generating excel log files automatically based on the reports settings.",
+      "D": "Macros are predefined templates for reports and cannot be customized."
+    },
+    "answers": ["A"],
+    "explanation": "FortiAnalyzer_7.0_Study_Guide-Online.pdf page 283: Note that macros are ADOM-specific and supported in FortiGate and FortiCarrier ADOMs only.",
+    "reference" : ""
+  },
+  {
+    "question": "Which two statements are true regarding FortiAnalyzer operating modes? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "When in collector mode, FortiAnalyzer collects logs from multiple devices and forwards these logs in the original binary format.",
+      "B": "Collector mode is the default operating mode.",
+      "C": "When in collector mode. FortiAnalyzer supports event management and reporting features.",
+      "D": "By deploying different FortiAnalyzer devices with collector and analyzer mode in a network, you can improve the overall performance of log receiving, analysis, and reporting"
+    },
+    "answers": ["A","D"],
+    "explanation": "",
+    "reference" : "https://docs.fortinet.com/document/fortianalyzer/7.0.0/administration-guide/227478/collector-mode \nhttps://docs.fortinet.com/document/fortianalyzer/7.0.0/administration-guide/312644/analyzer-collector-collaboration"
+  },
+  {
+    "question": "The exhibit shows \"remoteservergroup\" is an authentication server group with LDAP and RADIUS servers.\nWhich two statements express the significance of enabling \"Match all users on remote server\" when configuring a new administrator? (Choose two.)",
+    "question_image": "images/quiz113.png",
+    "options": {
+      "A": "It creates a wildcard administrator using LDAP and RADIUS servers.",
+      "B": "Administrator can log in to FortiAnalyzer using their credentials on remote servers LDAP and RADIUS.",
+      "C": "Use remoteadmin from LDAP and RADIUS servers will be able to log in to FortiAnalyzer at anytime.",
+      "D": "It allows administrators to use two-factor authentication."
+    },
+    "answers": ["A","B"],
+    "explanation": "",
+    "reference" : "https://docs.fortinet.com/document/fortimanager/7.0.1/administration-guide/858351/creating-administrators"
+  },
+  {
+    "question": "A rogue administrator was accessing FortiAnalyzer without permission, and you are tasked to see what activity was performed by that rogue administrator on FortiAnalyzer.\nWhat can you do on FortiAnalyzer to accomplish this?",
+    "question_image": "",
+    "options": {
+      "A": "Click FortiView and generate a report for that administrator.",
+      "B": "Click Task Monitor and view the tasks performed by that administrator.",
+      "C": "Click Log View and generate a report for that administrator.",
+      "D": " View the tasks performed by the rogue administrator in Fabric View."
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : "https://docs.fortinet.com/document/fortimanager/6.4.1/administration-guide/792943/task-monitor \nFortiAnalyzer_7.0_Study_Guide-Online.pdf page 54: View the tasks FortiAnalyzer administrators have performed, including progress and status."
+  },
+  {
+    "question": "The admin administrator is failing to register a FortiClient EMS on the FortiAnalyzer device. \nWhat can be the reason for this failure?",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer is in an HA cluster.",
+      "B": "ADOM mode should be set to advanced, in order to register the FortiClient EMS device.",
+      "C": "ADOMs are not enabled on FortiAnalyzer.",
+      "D": "A separate license is required on FortiAnalyzer in order to register the FortiClient EMS device."
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : "https://help.fortinet.com/fa/faz50hlp/56/5-6-2/FMG-FAZ/0800_ADOMs/0015_FortiClient%20and%20ADOMs.html"
+  },
+  {
+    "question": "Which two statements are true regarding enabling auto-cache on FortiAnalyzer? (Choose two.)",
+    "question_image": "images/quiz116.png",
+    "options": {
+      "A": "Report size will be optimized to conserve disk space on FortiAnalyzer.",
+      "B": "Reports will be cached in the memory.",
+      "C": "This feature is automatically enabled for scheduled reports.",
+      "D": "Enabling auto-cache reduces report generation time for reports that require a long time to assemble datasets."
+    },
+    "answers": ["C","D"],
+    "explanation": "\"Enable auto-cache in the report settings to boost the reporting performance and reduce report generation time. Scheduled reports have auto-cache enabled already.\"\nFortiAnalyzer_7.0_Study_Guide-Online page 306",
+    "reference" : ""
+  },
+  {
+    "question": "Which two statements are true regarding high availability (HA) on FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer HA can function without VRRP. and VRRP is required only if you have more than two FortiAnalyzer devices in a cluster.",
+      "B": "FortiAnalyzer HA supports synchronization of logs as well as some system and configuration settings.",
+      "C": "All devices in a FortiAnalyzer HA cluster must run in the same operation mode: analyzer or collector.",
+      "D": "FortiAnalyzer HA implementation is supported by many public cloud infrastructures such as AWS, Microsoft Azure, and Google Cloud."
+    },
+    "answers": ["B","C"],
+    "explanation": "",
+    "reference" : "https://help.fortinet.com/fa/faz50hlp/60/6-0-2/Content/FMG-FAZ/4600_HA/0000_HA.htm?TocPath=High%20Availability%7C_____0 \nFortiAnalyzer HA implementation works only in networks where Virtual Router Redundancy Protocol (VRRP) is permitted. Therefore it may not be supported by some public cloud infrastructures."
+  },
+  {
+    "question": "An administrator has moved FortiGate A from the root ADOM to ADOM1. Which two statements are true regarding logs? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Analytics logs will be moved to ADOM1 from the root ADOM automatically.",
+      "B": "Archived logs will be moved to ADOM1 from the root ADOM automatically.",
+      "C": "Logs will be presented in both ADOMs immediately after the move.",
+      "D": "Analytics logs will be moved to ADOM1 from the root ADOM after you rebuild the ADOM1 SQL database."
+    },
+    "answers": ["B","D"],
+    "explanation": "",
+    "reference" : "https://community.fortinet.com/t5/Fortinet-Forum/FW-Migration-between-ADOMs/m-p/32683?m=158008"
+  },
+  {
+    "question": "Which two actions should an administrator take to view Compromised Hosts on FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Enable web filtering in firewall policies on FortiGate devices, and make sure these logs are sent to FortiAnalyzer.",
+      "B": " Make sure all endpoints are reachable by FortiAnalyzer.",
+      "C": " Enable device detection on an interface on the FortiGate devices that are connected to the FortiAnalyzer device.",
+      "D": "Subscribe FortiAnalyzer to FortiGuard to keep its local threat database up to date."
+    },
+    "answers": ["A","D"],
+    "explanation": "In order to configure IOC, you require the following:\n· A one-year subscription to IOC. Note that FortiAnalyzer does include an evaluation license, but it is restrictive and only meant to give you an idea of how the feature works.\n· A web filter services subscription on FortiGate device(s)\n· Web filter policies on FortiGate device(s) that send traffic to FortiAnalyzerCompromised Hosts or Indicators of Compromise service (IOC) is a licensed feature.\nTo view Compromised Hosts, you must turn on the UTM web filter of FortiGate devices and subscribe your FortiAnalyzer unit to FortiGuard to keep its local threat database synchronized with the FortiGuard threat database. See Subscribing FortiAnalyzer to FortiGuard.",
+    "reference" : "https://docs.fortinet.com/document/fortianalyzer/6.4.0/administration-guide/137635/viewing-compromised-hosts"
+  },
+  {
+    "question": "In Log View, you can use the Chart Builder feature to build a dataset and chart based on the filtered search results. Similarly, which feature you can use for FortiView?",
+    "question_image": "",
+    "options": {
+      "A": "Export to Report Chart",
+      "B": "Export to PDF",
+      "C": "Export to Chart Builder",
+      "D": "Export to Custom Chart"
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : "https://community.fortinet.com/t5/FortiAnalyzer/Creating-a-Custom-report-from-FortiView-Export-to-Report-Chart/ta-p/190154?externalID=FD40483 \nSimilar to the Chart Builder feature in Log View, you can export a chart from a FortiView. The chart export includes any filters you set on the FortiView. FortiAnalyzer_7.0_Study_Guide-Online pag. 292."
+  },
+  {
+    "question": "What can you do on FortiAnalyzer to restrict administrative access from specific locations?",
+    "question_image": "",
+    "options": {
+      "A": "Configure trusted hosts for that administrator.",
+      "B": "Enable geo-location services on accessible interface.",
+      "C": "Configure two-factor authentication with a remote RADIUS server.",
+      "D": "Configure an ADOM for respective location."
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : "https://docs.fortinet.com/document/fortigate/6.2.0/hardening-your-fortigate/582009/system-administrator-best-practices"
+  },
+  {
+    "question": "An administrator fortinet, is able to view logs and perform device management tasks, such as adding and removing registered devices. However, administrator fortinet is not able to create a mall server that can be used to send email.\nWhat could be the problem?",
+    "question_image": "",
+    "options": {
+      "A": "Fortinet is assigned the Standard_ User administrator profile.",
+      "B": "A trusted host is configured.",
+      "C": "ADOM mode is configured with Advanced mode.",
+      "D": "Fortinet is assigned the Restricted_ User administrator profile."
+    },
+    "answers": ["A"],
+    "explanation": "· Super_User, which, like in FortiGate, provides access to all device and system privileges.\n· Standard_User, which provides read and write access to device privileges, but not system privileges.\n· Restricted_User, which provides read access only to device privileges, but not system privileges.\nAccess to the Management extensions is also removed.\n· No_Permissions_User, which provides no system or device privileges. Can be used, for example, to temporarily remove access granted to existing admins.\nFortiAnalyzer_7.0_Study_Guide-Online page 42",
+    "reference" : ""
+  },
+  {
+    "question": "Which two statements express the advantages of grouping similar reports? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": " Improve report completion time.",
+      "B": "Conserve disk space on FortiAnalyzer by grouping multiple similar reports.",
+      "C": "Reduce the number of hcache tables and improve auto-hcache completion time.",
+      "D": "Provides a better summary of reports."
+    },
+    "answers": ["A","C"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What are analytics logs on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "Log type Traffic logs.",
+      "B": "Logs that roll over when the log file reaches a specific size.",
+      "C": "Logs that are indexed and stored in the SQL.",
+      "D": "Raw logs that are compressed and saved to a log file."
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What is Log Insert Lag Time on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "The number of times in the logs where end users experienced slowness while accessing resources.",
+      "B": "The amount of lag time that occurs when the administrator is rebuilding the ADOM database.",
+      "C": "The amount of time that passes between the time a log was received and when it was indexed on FortiAnalyzer.",
+      "D": "The amount of time FortiAnalyzer takes to receive logs from a registered device"
+    },
+    "answers": [""],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What is the purpose of using the Chart Builder feature on FortiAnalyzer?",
+    "question_image": "images/quiz126.png",
+    "options": {
+      "A": "In Log View, this feature allows you to build a dataset and chart automatically, based on the filtered search results.",
+      "B": "In Log View, this feature allows you to build a chart and chart automatically, on the top 100 log entries.",
+      "C": "This feature allows you to build a chart under FortiView.",
+      "D": "You can add charts to generated reports using this feature."
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "Which two statement are true regardless initial Logs sync and Log Data Sync for Ha on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "By default, Log Data Sync is disabled on all backup devise.",
+      "B": "Log Data Sync provides real-time log synchronization to all backup devices.",
+      "C": "With initial Logs Sync, when you add a unit to an HA cluster, the primary device synchronizes its logs with the backup device.",
+      "D": "When Logs Data Sync is turned on, the backup device will reboot and then rebuilt the log database with the synchronized logs."
+    },
+    "answers": ["C","D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "Which two statements are true regarding fabric connectors? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "Configuring fabric connectors to send notification to ITSM platform upon incident creation Is more efficient than third-party information from the FortiAnalyzer API.",
+      "B": "Fabric connectors allow to save storage costs and improve redundancy.",
+      "C": "Storage connector service does not require a separate license to send logs to cloud platform.",
+      "D": "Cloud-Out connections allow you to send real-time logs to pubic cloud accounts like Amazon S3, Azure Blob , and Google Cloud."
+    },
+    "answers": ["A","D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "What does the disk status Degraded mean for RAID management?",
+    "question_image": "",
+    "options": {
+      "A": "One or more drives are missing from the FortiAnalyzer unit. The drive is no longer available to the operating system.",
+      "B": "The FortiAnalyzer device is writing to all the hard drives on the device in order to make the array fault tolerant.",
+      "C": "The FortiAnalyzer device is writing data to a newly added hard drive in order to restore the hard drive to an optimal state.",
+      "D": "The hard driveiIs no longer being used by the RAID controller"
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which statement is true when you are upgrading the firmware on an HA cluster made up of two FortiAnalyzer devices?",
+    "question_image": "",
+    "options": {
+      "A": "First, upgrade the secondary device, and then upgrade the primary device.",
+      "B": "Both FortiAnalyzer devices will be upgraded at the same time.",
+      "C": "You can enable uninterruptible-upgrade so that the normal FortiAnalyzer operations are not interrupted while the cluster firmware upgrades.",
+      "D": "You can perform the firmware upgrade using only a console connection."
+    },
+    "answers": ["A"],
+    "explanation": "FortiAnalyzer_7.0_Study_Guide-Online.pdf page 64: To upgrade FortiAnalyzer HA cluster firmware:\n1. Log in to each secondary device.\n2. Upgrade the firmware of all secondary devices.\n3. Wait for the upgrades to complete and verify that all secondary devices joined the cluster.\n4. Verify that logs on all secondary devices are synchronized with the primary device.\n5. Upgrade the primary device.\nhttps://docs.fortinet.com/document/fortianalyzer/7.2.0/upgrade-guide/262607/upgrading-fortianalyzer-firmware",
+    "reference" : ""
+  },
+    {
+    "question": "What is the purpose of output variables?",
+    "question_image": "",
+    "options": {
+      "A": "To store playbook execution statistics",
+      "B": "To use the output of the previous task as the input of the current task",
+      "C": "To display details of the connectors used by a playbook",
+      "D": "To save all the task settings when a playbook is exported"
+    },
+    "answers": ["B"],
+    "explanation": "FortiAnalyzer_7.0_Study_Guide-Online.pdf page 242: Output variables allow you to use the output from a preceding task as an input to the current task.\n\"Output variables allow you to use the output from a preceding task as an input to the current task.\" FortiAnalyzer_7.0_Study_Guide-Online page 242",
+    "reference" : ""
+  },
+    {
+    "question": "Which two elements are contained in a system backup created on FortiAnalyzer? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "System information",
+      "B": "Logs from registered devices",
+      "C": "Report information",
+      "D": "Database snapshot"
+    },
+    "answers": ["A","C"],
+    "explanation": "What does the System Configuration backup include?\nSystem information, such as the device IP address and administrative user information. Device list, such as any devices you configured to allow log access.Report information, such as any configured report settings, as well as all your custom report details.\nThese are not the actual reports.\nFortiAnalyzer_7.0_Study_Guide-Online pag. 29\nFortiAnalyzer_7.0_Study_Guide-Online.pdf page 29: What does the System Configuration backup include?\n· System information, such as the device IP address and administrative user information\n· Device list, such as any devices you configured to allow log access\n· Report information, such as any configured report settings, as well as all your custom report details.\nThese are not the actual reports.",
+    "reference" : ""
+  },
+    {
+    "question": "Which two statements are correct regarding the export and import of playbooks? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "You can export only one playbook at a time.",
+      "B": "You can import a playbook even if there is another one with the same name in the destination.",
+      "C": "Playbooks can be exported and imported only within the same FortiAnaryzer.",
+      "D": " A playbook that was disabled when it was exported, will be disabled when it is imported."
+    },
+    "answers": ["B","D"],
+    "explanation": "If the imported playbook has the same name as an existing one, FortiAnalyzer will create a new name that includes a timestamp to avoid conflicts.\nPlaybooks are imported with the same status they had (enabled or disabled) when they were exported.\nPlaybooks set to run automatically should be exported while they are disabled to avoid unintended runs on the destination.",
+    "reference" : ""
+  },
+    {
+    "question": "Which SQL query is in the correct order to query the database in the FortiAnslyzer?",
+    "question_image": "",
+    "options": {
+      "A": "SELECT devid FROM Slog GROOP BY devid WHERE * user' =* USERl'",
+      "B": "SELECT devid WHERE 'u3er'='USERl' FROM $ log GROUP BY devid",
+      "C": "SELECT devid FROM Slog- WHERE *user' =' USERl' GROUP BY devid",
+      "D": "FROM Slog WHERE 'user* =' USERl' SELECT devid GROUP BY devid"
+    },
+    "answers": ["C"],
+    "explanation": "FortiAnalyzer_7.0_Study_Guide-Online.pdf page 259: The main clauses FortiAnalyzer reports use are as follows:\n·FROM\n·WHERE\n·GROUP BY\n·ORDER BY\n·LIMIT\n·OFFSET\nAccordingly, following the SELECT keyword, the statement must be followed by one or more clauses in the order in which they appear in the table shown on this slide.",
+    "reference" : ""
+  },
+    {
+    "question": "How many events will be added to the incident created after running this playbook?",
+    "question_image": "images/quiz135.png",
+    "options": {
+      "A": "Ten events will be added.",
+      "B": "No events will be added.",
+      "C": "Five events will be added.",
+      "D": "Thirteen events will be added."
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which daemon is responsible for enforcing the log file size?",
+    "question_image": "",
+    "options": {
+      "A": "sqlplugind",
+      "B": "logfiled",
+      "C": "miglogd",
+      "D": "ofrpd"
+    },
+    "answers": ["B"],
+    "explanation": "FortiAnalyzer_7.0_Study_Guide-Online.pdf page 121: The logfiled process enforces the log file size and is also responsible for disk quota enforcement by monitoring the other processes.",
+    "reference" : ""
+  },
+    {
+    "question": "Which statement is correct regarding the event displayed?",
+    "question_image": "images/quiz137.png",
+    "options": {
+      "A": "The security risk was blocked or dropped.",
+      "B": "The security event risk is considered open.",
+      "C": "An incident was created from this event.",
+      "D": "The risk source is isolated."
+    },
+    "answers": ["B"],
+    "explanation": "Events in FortiAnalyzer will be in one of four statuses. The current status will determine if more actions need to be taken by the security team or not.\nThe possible statuses are:\nUnhandled: The security event risk is not mitigated or contained, so it is considered open.\nContained: The risk source is isolated.\nMitigated: The security risk is mitigated by being blocked or dropped.\n(Blank): Other scenarios.\nFortiAnalyzer_7.0_Study_Guide-Online pag. 206",
+    "reference" : ""
+  },
+    {
+    "question": "What is required to authorize a FortiGate on FortiAnalyzer using Fabric authorization?",
+    "question_image": "",
+    "options": {
+      "A": "A FortiGate ADOM",
+      "B": "The FortiGate serial number",
+      "C": "A pre-shared key",
+      "D": "Valid FortiAnalyzer credentials"
+    },
+    "answers": ["D"],
+    "explanation": "FortiAnalyzer_7.0_Study_Guide-Online.pdf page 93: The fourth method uses the Fortinet Security Fabric authorization process. This method requires that both FortiGate and FortiAnalyzer are running version 7.0.1 or higher. It is also required that the FortiGate administrator has valid credentials to log in on FortiAnalyzer and complete the registration.\nhttps://docs.fortinet.com/document/fortianalyzer/7.2.1/administration-guide/13897/adding-a-fortigate-using-security-fabric-authorization",
+    "reference" : ""
+  },
+    {
+    "question": "Which image corresponds to the packet capture shown in the exhibit?",
+    "question_image": "images/quiz139.png",
+    "options": {
+      "A": "images/quiz139_answer1.png",
+      "B": "images/quiz139_answer2.png",
+      "C": "images/quiz139_answer3.png",
+      "D": "images/quiz139_answer4.png"
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Laptopt is used by several administrators to manage FortiAnalyzer. You want to configure a generic text filter that matches all login attempts to the web interface generated by any user other than \"admin\" and coming from Laptop1:\nWhich filter will achieve the desired result?",
+    "question_image": "images/quiz140.png",
+    "options": {
+      "A": "operation-login & performed_on==\"GUI(10.1.1.100)\" & user!=admin",
+      "B": "operation-login & srcip==10.1.1.100 & dstip==10.1.1.210 & user==admin",
+      "C": "operation-login & dstip==10.1.1.210 & userl-admin",
+      "D": "operation-login & performed_on==\"GUI(10.1.1.210)' & user!=admin"
+    },
+    "answers": ["A"],
+    "explanation": "On there the task was to create a filter for failed logins from any other location but the local computer: \"Add the text performed_on!~10.0.1.10. This includes any attempts coming from devices with an IP address that is not the one configured on the Local-Client computer.\"",
+    "reference" : ""
+  },
+    {
+    "question": "If the primary FortiAnalyzer in an HA cluster fails, how is the new primary elected?",
+    "question_image": "",
+    "options": {
+      "A": "The configured IP address is checked first.",
+      "B": "The active port number is checked first.",
+      "C": "The firmware version is checked first.",
+      "D": "The configured priority is checked first"
+    },
+    "answers": ["D"],
+    "explanation": "In the case of a primary device failure, FortiAnalyzer HA uses the following rules to select a new primary:\n· All cluster devices are assigned a priority from 80 to 120. The default priority is 100. If the primary device becomes unavailable, the device with the highest priority is selected as the new primary device. For example, a device with a priority of 110 is selected over a device with a priority of 100.\n· If multiple devices have the same priority, the device whose primary IP address has the greatest value is selected as the new primary device. For example, 123.45.67.124 is selected over 123.45.67.123.\n· If a new device with a higher priority or a greater value IP address joins the cluster, the new device does not replace (or pre-empt) the current primary device automatically.\nFortiAnalyzer_7.0_Study_Guide-Online page 62",
+    "reference" : ""
+  },
+    {
+    "question": "Which statement is true about sending notifications with incident updates?",
+    "question_image": "",
+    "options": {
+      "A": "Notifications can be sent only when an incident is updated or deleted.",
+      "B": "If you use multiple fabric connectors, all connectors must have the same notification settings",
+      "C": "Notifications can be sent only by email.",
+      "D": "You can send notifications to multiple external platforms"
+    },
+    "answers": ["D"],
+    "explanation": "You can add more than one fabric connector, each with the same or different notification settings. The receiving side of the connector must be configured for the notifications to be sent successfully. FortiAnalyzer_7.0_Study_Guide-Online.pdf page 34: Fabric connectors also enable FortiAnalyzer to send notifications to ITSM platforms when a new incident is created or for any subsequent updates.",
+    "reference" : ""
+  },
+    {
+    "question": "Which statement correctly describes the management extensions available on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "Management extensions do not require additional licenses.",
+      "B": "Management extensions allow FortiAnalyzer to act as a ForbSIEM supervisor.",
+      "C": "Management extensions require a dedicated VM for best performance.",
+      "D": " Management extensions may require a minimum number of CPU cores to run."
+    },
+    "answers": ["D"],
+    "explanation": "Events in FortiAnalyzer will be in one of four statuses. The current status will determine if more actions need to be taken by the security team or not.\nThe possible statuses are:\nUnhandled: The security event risk is not mitigated or contained, so it is considered open.\nContained: The risk source is isolated.\nMitigated: The security risk is mitigated by being blocked or dropped.\n(Blank): Other scenarios.\nFortiAnalyzer_7.0_Study_Guide-Online pag. 189.\nFortiAnalyzer_7.0_Study_Guide-Online.pdf page 189: Review the hardware requirements before you enable a management extension application. Some of them require a minimum amount of memory or a minimum number of CPU cores.",
+    "reference" : ""
+  },
+    {
+    "question": "A play book contains five tasks in total. An administrator executed the playbook and four out of five tasks finished successfully, but one task failed.\nWhat will be the status of the playbook after its execution?",
+    "question_image": "",
+    "options": {
+      "A": "Success",
+      "B": "Failed",
+      "C": "Running",
+      "D": " Upstream_failed"
+    },
+    "answers": ["B"],
+    "explanation": "Playbook jobs that include one or more failed tasks are labeled as Failed in Playbook Monitor. FortiAnalyzer_7.0_Study Guide page No: 247\nPlaybook jobs that include one or more failed tasks are labeled as Failed in Playbook Monitor. A failed status, however, does not mean that all tasks failed. Some individual actions may have been completed successfully.",
+    "reference" : ""
+  },
+    {
+    "question": "When working with FortiAnalyzer reports, what is the purpose of a dataset?",
+    "question_image": "",
+    "options": {
+      "A": "To provide the layout used for reports",
+      "B": "To define the chart type to be used",
+      "C": "To retrieve data from the database",
+      "D": "To set the data included in templates"
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : "https://docs2.fortinet.com/document/fortianalyzer/6.0.4/administration-guide/148744/creating-datasets \nDatasets: Structured Query Language (SQL) SELECT queries that extract specific data from the database"
+  },
+    {
+    "question": "The image displays the configuration of a FortiAnalyzer the administrator wants to join to an existing HA cluster. What can you conclude from the configuration displayed?",
+    "question_image": "images/quiz146.png",
+    "options": {
+      "A": "This FortiAnalyzer will join to the existing HA cluster as the primary.",
+      "B": "This FortiAnalyzer is configured to receive logs in its port1.",
+      "C": "This FortiAnalyzer will trigger a failover after losing communication with its peers for 10 seconds.",
+      "D": "After joining to the cluster, this FortiAnalyzer will keep an updated log database."
+    },
+    "answers": ["B"],
+    "explanation": "\"If the preferred role is Primary, then this unit becomes the primary unit if it is configured first in a new HA cluster. If there is an existing primary unit, then this unit becomes a secondary unit.\" (https://docs.fortinet.com/document/fortianalyzer/7.0.5/administration-guide/275104)",
+    "reference" : ""
+  },
+    {
+    "question": "You crested a playbook on FortiAnalyzer that uses a FortiOS connector \nWhen configuring the FortiGate side, which type of trigger must be used so that the actions in an automation stitch are available in the FortiOS connector?",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer Event Handler",
+      "B": "Incoming webhook",
+      "C": "FortiOS Event Log",
+      "D": "Fabric Connector event"
+    },
+    "answers": ["C"],
+    "explanation": "One possible scenario is shown on the slide:\n1. Traffic flows through the FortiGate\n2. FortiGate sends logs to FortiAnalyzer\n3. FortiAnalyzer detects some suspicious traffic and generates an event\n4. The event triggers the execution of a playbook in FortiAnalyzer, which sends a webhook call to FortiGate so that it runs an automation stitch\n5. FortiGate runs the automation stitch with the corrective or preventive actions\nFortiAnalyzer_7.0_Study_Guide-Online page 228\nIn order to see the actions related to the FOS connector, you must enable an automation rule using the Incoming Webhook Call trigger on the FortiGate side. FortiAnalyzer_7.0_Study Guide page no",
+    "reference" : ""
+  },
+    {
+    "question": "Which FortiAnalyzer feature allows you to use a proactive approach when managing your network security?",
+    "question_image": "",
+    "options": {
+      "A": "Incidents dashboards",
+      "B": "Threat hunting",
+      "C": "FortiView Monitor",
+      "D": "Outbreak alert services"
+    },
+    "answers": ["D"],
+    "explanation": "FortiAnalyzer_7.0_Study_Guide-Online.pdf page 217: Threat hunting consists in proactively searching for suspicious or potentially risky network activity in your environment. The proactive approach will help administrator find any threats that might have eluded detection by the current security solutions or configurations.",
+    "reference" : ""
+  },
+    {
+    "question": "What must you consider when using log fetching? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "The fetch client can retrieve logs from devices that are not added to its local Device Manager",
+      "B": "You can use filters to include only logs from a single device.",
+      "C": "The fetching profile must include a user with the Super_User profile.",
+      "D": "The archive logs retrieved from the server become archive logs in the client."
+    },
+    "answers": ["B","C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which two statements are true regarding the outbreak detection service? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "New alerts are received by email.",
+      "B": "Outbreak alerts are available on the root ADOM only.",
+      "C": "An additional license is required.",
+      "D": "It automatically downloads new event handlers and reports."
+    },
+    "answers": ["C","D"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "What are two effects of enabling auto-cache in a FortiAnalyzer report? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "The size of newly generated reports is optimized to conserve disk space.",
+      "B": "FortiAnalyzer local cache is used to store generated reports.",
+      "C": "When new logs are received, the hard-cache data is updated automatically.",
+      "D": "The generation time for reports is decreased."
+    },
+    "answers": ["C","D"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Why must you wait for several minutes before you run a playbook that you just created?",
+    "question_image": "",
+    "options": {
+      "A": "FortiAnalyzer needs that time to parse the new playbook.",
+      "B": "FortiAnalyzer needs that time to back up the current playbooks.",
+      "C": " FortiAnalyzer needs that time to ensure there are no other playbooks running.",
+      "D": "FortiAnalyzer needs that time to debug the new playbook."
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which statement describes online logs on FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "Logs that reached a specific size and were rolled over",
+      "B": "Logs that can be used to create reports",
+      "C": "Logs that can be viewed using Log Browse",
+      "D": "Logs that are saved to disk, compressed, and available in FortiView"
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "How can you attach a report to an incident?",
+    "question_image": "",
+    "options": {
+      "A": "By attaching it to an event handler alert",
+      "B": "By editing the settings of the desired report",
+      "C": "From the properties of an existing incident",
+      "D": "Saving it in JSON format, and then importing it"
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which item must you configure on FortiAnalyzer to email generated reports automatically?",
+    "question_image": "",
+    "options": {
+      "A": "Output profile",
+      "B": "Report scheduling",
+      "C": "SFTP server",
+      "D": "SNMP server"
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which statement about the FortiSOAR management extension is correct?",
+    "question_image": "",
+    "options": {
+      "A": "It requires a FortiManager configured to manage FortiGate",
+      "B": "It requires a dedicated FortiSOAR device or VM.",
+      "C": "It does not include a limited trial by default.",
+      "D": "It runs as a docker container on FortiAnalyzer"
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Why run the command diagnose sql status sqlplugind?",
+    "question_image": "",
+    "options": {
+      "A": "To list the current SQL processes running",
+      "B": "To check what is the database log insertion status",
+      "C": "To display the SOL query connections and hcache status",
+      "D": "To view the current hcache size"
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "What are two benefits of using fabric connectors? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "They allow FortiAnalyzer to send logs in real-time to public cloud accounts.",
+      "B": "You do not need an additional license to send logs to the cloud platform.",
+      "C": "Fabric connectors allow you to improve redundancy.",
+      "D": "Using fabric connectors is more efficient than using third-party polling with API."
+    },
+    "answers": ["A","C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which log will generate an event with the status Contained?",
+    "question_image": "",
+    "options": {
+      "A": "An IPS log with action=pass.",
+      "B": "A WebFilter log with action=dropped.",
+      "C": "An AV log with action=quarantine.",
+      "D": "An AppControl log with action=blocked."
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Laptop1 is used by several administrators to manage FortiAnalyzer. You want to configure a generic text filter that matches all login attempts to the web interface generated by any user other than \"admin\", and coming from Laptop1.\nWhich filter will achieve the desired result?",
+    "question_image": "images/quiz160.png",
+    "options": {
+      "A": "operation-login & dstip==10.1.1.210 & user!-admin",
+      "B": "operation-login & srcip==10.1.1.100 & dstip==10.1.1.210 & user==admin",
+      "C": "operation-login & performed_on==\"GUI(10.1.1.210)\" & user!=admin",
+      "D": "operation-login & performed_on==\"GUI(10.1.1.100)\" & user!=admin"
+    },
+    "answers": ["B"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "After generating a report, you notice the information you were expecting to see is not included in it.\nWhat are two possible reasons for this scenario? (Choose two.)",
+    "question_image": "",
+    "options": {
+      "A": "You enabled auto-cache with extended log filtering.",
+      "B": "The logfiled service has not indexed all the expected logs.",
+      "C": "The logs were overwritten by the data retention policy.",
+      "D": "The time frame selected in the report is wrong."
+    },
+    "answers": ["B","C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "What is the purpose of using prefilters when configuring event handlers?",
+    "question_image": "",
+    "options": {
+      "A": "They limit which logs are checked for matches by the other filters.",
+      "B": "They can filter the logs before they are processed by FortiAnalyzer",
+      "C": "They download new filters to be used in event handlers.",
+      "D": "They are common filters applied simultaneously to all event handlers."
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which statement describes a dataset in FortiAnalyzer?",
+    "question_image": "",
+    "options": {
+      "A": "They determine what data is retrieved from the database.",
+      "B": "They provide the layout used for reports.",
+      "C": "They are used to set the data included in templates.",
+      "D": "They define the chart types to be used in reports."
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "A playbook contains five tasks in total. An administrator runs the playbook and four out of five tasks finish successfully, but one task fails.\nWhat will be the status of the playbook after it is run?",
+    "question_image": "",
+    "options": {
+      "A": "Running",
+      "B": "Failed",
+      "C": "Upstream_failed",
+      "D": "Success"
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "What is the purpose of trigger variables?",
+    "question_image": "",
+    "options": {
+      "A": "To display statistics about the playbook runtime",
+      "B": "To use information from the trigger to filter the action in a task",
+      "C": "To provide the trigger information to make the playbook start running",
+      "D": "To store the start times of playbooks with On_Schedule triggers"
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Which statement about sending notifications with incident updates is true?",
+    "question_image": "",
+    "options": {
+      "A": "Notifications can be sent only when an incident is created or deleted.",
+      "B": "You must configure an output profile to send notifications by email.",
+      "C": "Each incident can send notifications to a single external platform.",
+      "D": "Each connector used can have different notification settings."
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "What is the purpose of using the Chart Builder feature on FortiAnalyzer?",
+    "question_image": "images/quiz167.png",
+    "options": {
+      "A": "To add a new chart under FortiView to be used in new reports",
+      "B": "To build a dataset and chart automatically, based on the filtered search results",
+      "C": "To add charts directly to generate reports in the current ADOM",
+      "D": "To build a chart automatically based on the top 100 log entries"
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "What happens when the IOC breach detection engine on FortiAnalyzer finds web logs that match a blocklisted IP address?",
+    "question_image": "",
+    "options": {
+      "A": "The endpoint is marked as Compromised and. optionally, can be put in quarantine.",
+      "B": "FortiAnalyzer flags the associated host for further analysis.",
+      "C": "A new Infected entry is added for the corresponding endpoint.",
+      "D": "The detection engine classifies those logs as Suspicious"
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "Based on the partial outputs displayed, which devices can be members of a FortiAnalyzer Fabric?",
+    "question_image": "images/quiz169.png",
+    "options": {
+      "A": "FortiAnalyzerl and FortiAnalyzer3",
+      "B": "FortiAnalyzer1 and FortiAnalyzer2",
+      "C": "All devices listed can be members",
+      "D": "FortiAnalyzer2 and FortiAnalyzer3"
+    },
+    "answers": ["C"],
+    "explanation": "",
+    "reference" : ""
+  },
+    {
+    "question": "What does the data point at 12:20 indicate?",
+    "question_image": "images/quiz170.png",
+    "options": {
+      "A": "The performance of FortiAnalyzer is below the baseline.",
+      "B": "FortiAnalyzer is using its cache to avoid dropping logs.",
+      "C": "The log insert lag time is increasing.",
+      "D": "The sqlplugind service is caught up with new logs."
+    },
+    "answers": ["D"],
+    "explanation": "",
+    "reference" : ""
+  },
+  {
+    "question": "Which statement about the FortiSIEM management extension is correct?",
+    "question_image": "",
+    "options": {
+      "A": "Allows you to manage the entire life cycle of a threat or breach.",
+      "B": "Its use of the available disk space is capped at 50%.",
+      "C": "It requires a licensed FortiSIEM supervisor.",
+      "D": "It can be installed as a dedicated VM."
+    },
+    "answers": ["A"],
+    "explanation": "",
+    "reference" : ""
+  }
+]

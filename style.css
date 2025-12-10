@@ -1,0 +1,243 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background: #f9fafb;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2, h3 {
+  color: #1e3a8a; /* น้ำเงินเข้ม */
+}
+
+.question {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.option {
+  display: block;              /* ให้ช้อยเรียงแนวตั้ง */
+  width: 100%;                 /* ปุ่มเต็มความกว้าง */
+  padding: 10px 15px;
+  margin: 8px 0;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option:hover {
+  background: #e0e7ff;         /* hover สีฟ้าอ่อน */
+  border-color: #6366f1;
+}
+
+.option:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.correct {
+  color: #16a34a;              /* เขียวสด */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.wrong {
+  color: #dc2626;              /* แดงสด */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.feedback {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f1f5f9;
+  border-left: 4px solid #3b82f6;
+  border-radius: 6px;
+}
+
+.feedback p {
+  margin: 5px 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+.form-group {
+  margin: 20px 0;
+  text-align: left;
+}
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151; /* เทาเข้ม */
+}
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-input:focus {
+  border-color: #2563eb; /* ฟ้า */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer; /* ให้ทั้งกลุ่มเป็น clickable */
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+.checkbox-group:hover {
+  background: #f3f4f6; /* hover มีพื้นหลังอ่อน ๆ */
+}
+.checkbox-group input[type="checkbox"] {
+  width: 20px;   /* ขยายขนาด checkbox */
+  height: 20px;
+  cursor: pointer;
+}
+.checkbox-group label {
+  cursor: pointer;
+  font-size: 16px;
+  color: #374151;
+}
+
+
+.start-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  width: 100px;
+}
+.start-btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+.start-btn:active {
+  background: #1e3a8a;
+  transform: translateY(0);
+}
+
+
+.next-btn {
+  background: #2563eb;       /* ฟ้าเข้ม */
+  color: #fff;               /* ตัวอักษรขาว */
+  border: none;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+.next-btn:hover {
+  background: #1e40af;       /* ฟ้าเข้มขึ้นเมื่อ hover */
+  transform: translateY(-2px);
+}
+.next-btn:active {
+  background: #1e3a8a;       /* กดแล้วเข้มขึ้นอีก */
+  transform: translateY(0);
+}
+
+
+#backBtn {
+  background: #6b7280;        /* เทาเข้ม */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  width: 100%;                /* ปุ่มเต็มความกว้าง */
+}
+#backBtn:hover {
+  background: #4b5563;        /* hover เข้มขึ้น */
+  transform: translateY(-2px);
+}
+#backBtn:active {
+  background: #374151;        /* กดแล้วเข้มขึ้นอีก */
+  transform: translateY(0);
+}
+
+
+.result-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.result-box h2 {
+  color: #1e40af;
+  margin-bottom: 15px;
+}
+.result-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.result-box button {
+  background: #6b7280;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+.result-box button:hover {
+  background: #4b5563;
+  transform: translateY(-2px);
+}
+.result-box button:active {
+  background: #374151;
+  transform: translateY(0);
+}
