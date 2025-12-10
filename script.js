@@ -65,7 +65,7 @@ function renderQuestion() {
   const isChooseThree = q.question.includes("(Choose three.)");
 
   if (isChooseTwo || isChooseThree) {
-    // ใช้ checkbox โดยให้ label ครอบ input → ช่องอยู่หน้าข้อความ
+    // ใช้ checkbox โดยให้ label ครอบ input → ช่องอยู่หน้าข้อความ/รูป
     for (const [key, value] of Object.entries(q.options)) {
       const wrapper = document.createElement("div");
       wrapper.className = "checkbox-group";
@@ -80,10 +80,20 @@ function renderQuestion() {
       input.value = key;
       input.className = "option";
 
-      const textNode = document.createTextNode(`${key}: ${value}`);
-
       label.appendChild(input);
-      label.appendChild(textNode);
+
+      // ✅ ถ้า value เป็น path รูปภาพ → แสดงรูป
+      if (value.match(/\.(jpg|jpeg|png|gif)$/i)) {
+        const img = document.createElement("img");
+        img.src = value;
+        img.alt = `option ${key}`;
+        img.style.maxWidth = "150px";
+        img.style.display = "block";
+        label.appendChild(img);
+      } else {
+        const textNode = document.createTextNode(`${key}: ${value}`);
+        label.appendChild(textNode);
+      }
 
       wrapper.appendChild(label);
       qDiv.appendChild(wrapper);
@@ -104,7 +114,14 @@ function renderQuestion() {
     for (const [key, value] of Object.entries(q.options)) {
       const btn = document.createElement("button");
       btn.className = "option";
-      btn.textContent = `${key}: ${value}`;
+
+      // ✅ ถ้า value เป็น path รูปภาพ → แสดงรูป
+      if (value.match(/\.(jpg|jpeg|png|gif)$/i)) {
+        btn.innerHTML = `${key}: <img src="${value}" alt="option ${key}" style="max-width:150px; display:block;">`;
+      } else {
+        btn.textContent = `${key}: ${value}`;
+      }
+
       btn.onclick = () => checkAnswer([key], q.answers, q, qDiv, false, false);
       qDiv.appendChild(btn);
     }
